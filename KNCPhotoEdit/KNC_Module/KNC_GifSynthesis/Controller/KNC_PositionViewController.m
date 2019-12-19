@@ -23,11 +23,11 @@ static NSString * const PositionCellID = @"PositionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = RGBColor(32, 32, 35);
+//    self.view.backgroundColor = KNC_RGBColor(32, 32, 35);
     
     self.title = @"顺序调整";
     
-    self.navigationController.navigationBar.barTintColor = RGBColor(0, 0, 0);
+    self.navigationController.navigationBar.barTintColor = KNC_RGBColor(0, 0, 0);
     
     [self.view addSubview:self.editTable];
 }
@@ -47,8 +47,8 @@ static NSString * const PositionCellID = @"PositionCell";
         _editTable = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _editTable.delegate = self;
         _editTable.dataSource = self;
-//        _editTable.backgroundColor = RGBColor(32, 32, 35);
-        _editTable.contentInset = UIEdgeInsetsMake(20, 0, TabMustAdd, 0);
+//        _editTable.backgroundColor = KNC_RGBColor(32, 32, 35);
+        _editTable.contentInset = UIEdgeInsetsMake(20, 0, KNC_TabMustAdd, 0);
         _editTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _editTable.editing = YES;
         [_editTable registerClass:[KNC_AddImageTableViewCell class] forCellReuseIdentifier:PositionCellID];
@@ -69,9 +69,9 @@ static NSString * const PositionCellID = @"PositionCell";
         cell = [[KNC_AddImageTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:PositionCellID];
     }
     cell.psImageView.image = self.imageArr[indexPath.row];
-    cell.psImageView.frame = CGRectMake(SCREEN_Width*0.1, 5, SCREEN_Width*0.8, 80);
+    cell.psImageView.frame = CGRectMake(KNC_SCREEN_W*0.1, 5, KNC_SCREEN_W*0.8, 80);
     tableView.rowHeight = 90;
-//    cell.backgroundColor = RGBColor(32, 32, 35);
+//    cell.backgroundColor = KNC_RGBColor(32, 32, 35);
     return cell;
 }
 

@@ -40,7 +40,7 @@
     
     WKWebViewConfiguration *confifg = [[WKWebViewConfiguration alloc] init];
     confifg.selectionGranularity = WKSelectionGranularityCharacter;
-    self.onlineWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_Height ) configuration:confifg];
+    self.onlineWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_H ) configuration:confifg];
     self.onlineWebView.opaque = NO;
     [self.onlineWebView.scrollView setShowsVerticalScrollIndicator:NO];
     [self.onlineWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url_Str]]];
@@ -106,7 +106,7 @@
         [SVProgressHUD showWithStatus:@"截图中..."];
         KNC_SnapshotHandler.defaultHandler.delegate = self;
         
-        [KNC_SnapshotHandler.defaultHandler snapshotForView:self.onlineWebView];
+        [KNC_SnapshotHandler.defaultHandler knc_snapshotForView:self.onlineWebView];
     }
 
     

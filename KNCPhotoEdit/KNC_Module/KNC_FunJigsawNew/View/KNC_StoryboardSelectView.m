@@ -41,7 +41,7 @@
     _storyboardV = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 50)];
     [_storyboardV setShowsVerticalScrollIndicator:NO];
     [_storyboardV setShowsHorizontalScrollIndicator:NO];
-//    [_storyboardV setBackgroundColor:[HexColor(0x454545) colorWithAlphaComponent:0.6]];
+//    [_storyboardV setBackgroundColor:[KNC_HexColor(0x454545) colorWithAlphaComponent:0.6]];
     [self addSubview:_storyboardV];
     
     CGFloat width = 140/2.0f;

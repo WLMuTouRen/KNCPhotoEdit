@@ -36,7 +36,7 @@
         
         make.left.equalTo(self.view).offset(20);
         make.right.equalTo(self.view).offset(-15);
-        make.top.equalTo(self.view).offset(10 + Nav_topH);
+        make.top.equalTo(self.view).offset(10 + KNC_Nav_topH);
         make.height.mas_equalTo(25);
     }];
 
@@ -50,9 +50,9 @@
         [btn setTitle:self.urlTitleArr[i] forState:UIControlStateNormal];
         [btn setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
         if (i > 3) {
-            btn.frame = CGRectMake(((SCREEN_Width - 100)/4 + 20) * (i - 4) + 20 ,Nav_topH + 110, (SCREEN_Width - 100)/4, 30);
+            btn.frame = CGRectMake(((KNC_SCREEN_W - 100)/4 + 20) * (i - 4) + 20 ,KNC_Nav_topH + 110, (KNC_SCREEN_W - 100)/4, 30);
         }else{
-            btn.frame = CGRectMake(((SCREEN_Width - 100)/4 + 20) * i + 20 ,Nav_topH + 70, (SCREEN_Width - 100)/4, 30);
+            btn.frame = CGRectMake(((KNC_SCREEN_W - 100)/4 + 20) * i + 20 ,KNC_Nav_topH + 70, (KNC_SCREEN_W - 100)/4, 30);
         }
         
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,7 +61,7 @@
     
     [self.view addSubview:self.startBtn];
     [self.startBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(190 + Nav_topH);
+        make.top.equalTo(self.view).offset(190 + KNC_Nav_topH);
         make.left.equalTo(self.view).offset(30);
         make.right.equalTo(self.view).offset(-30);
         make.height.mas_equalTo(44);
@@ -135,7 +135,7 @@
     if (!_startBtn) {
         _startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_startBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-        _startBtn.backgroundColor = RGBColor(131, 102, 255);
+        _startBtn.backgroundColor = KNC_RGBColor(131, 102, 255);
         _startBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_startBtn setTitle:@"开始截图" forState:UIControlStateNormal];
         [_startBtn addTarget:self action:@selector(startBtnClick) forControlEvents:UIControlEventTouchUpInside];

@@ -42,7 +42,7 @@
     
     self.title = @"趣味拼图";
     
-    self.view.backgroundColor = PSColorTheme;
+    self.view.backgroundColor = KNCMianColor;
 }
 
 - (void)p_setUpUI {
@@ -58,7 +58,7 @@
        
         make.left.equalTo(self.view).offset(20);
         make.right.equalTo(self.view).offset(-20);
-        make.top.equalTo(self.view).offset(Nav_topH + 20);
+        make.top.equalTo(self.view).offset(KNC_Nav_topH + 20);
         make.height.equalTo(self.jigsawView.mas_width);
     }];
 }

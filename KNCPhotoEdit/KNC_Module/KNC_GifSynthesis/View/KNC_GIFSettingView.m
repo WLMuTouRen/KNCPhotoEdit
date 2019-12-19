@@ -93,7 +93,7 @@
         _changeLabel.text = @"0.50s";
         _changeLabel.textAlignment = NSTextAlignmentCenter;
         _changeLabel.font = NameBFont(15);
-        _changeLabel.textColor = RGBColor(200, 200, 200);
+        _changeLabel.textColor = KNC_RGBColor(200, 200, 200);
         [_changeLabel setMinimumScaleFactor:10];
     }
     return _changeLabel;
@@ -122,7 +122,7 @@
         _imageColl.layer.cornerRadius = 5;
         _imageColl.layer.masksToBounds = YES;
         
-        _imageColl.backgroundColor = RGBColor(230, 230, 230);
+        _imageColl.backgroundColor = KNC_RGBColor(230, 230, 230);
         
         //注册cell
         [_imageColl registerClass:[KNC_GIFSettingCollectionViewCell class] forCellWithReuseIdentifier:@"cellImage"];

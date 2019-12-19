@@ -132,7 +132,11 @@
         [SVProgressHUD showInfoWithStatus:@"请添加图片"];
         return;
     }
-
+    if (!isVip) {
+        KNC_BuyViewController *buyVc =   [[KNC_BuyViewController alloc]init];
+        [self.navigationController pushViewController:buyVc animated:YES];
+        return;
+    }
     weakSelf(self);
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"是否导出带水印图片"
                                                                    message:@""
@@ -182,7 +186,7 @@
 - (void)saveWatermarkImage:(UIImage *)image {
     weakSelf(self);
     UIImage *watermarkImage = [UIImage imageNamed:@"watermark_image"];
-    UIImage *tempImage = [KNC_ImageTool GetWaterPrintedImageWithBackImage:image andWaterImage:watermarkImage inRect:CGRectMake(SCREEN_Width-136-55, 15, 121, 30) alpha:1 waterScale:YES];
+    UIImage *tempImage = [KNC_ImageTool GetWaterPrintedImageWithBackImage:image andWaterImage:watermarkImage inRect:CGRectMake(KNC_SCREEN_W-136-55, 15, 121, 30) alpha:1 waterScale:YES];
     
     [weakSelf saveWithImage:tempImage];
 }
@@ -246,8 +250,8 @@
 - (KNC_StoryboardSelectView *)storyboardView{
     if (!_storyboardView) {
         _storyboardView =
-        _storyboardView = [[KNC_StoryboardSelectView alloc] initWithFrame:CGRectMake(0, SCREEN_Height - Tab_H, SCREEN_Width, 50) picCount:[self.assets count]];
-        [_storyboardView setBackgroundColor:HexColor(0xFDF5E6)];
+        _storyboardView = [[KNC_StoryboardSelectView alloc] initWithFrame:CGRectMake(0, KNC_SCREEN_H - KNC_Tab_H, KNC_SCREEN_W, 50) picCount:[self.assets count]];
+        [_storyboardView setBackgroundColor:KNC_HexColor(0xFDF5E6)];
         _storyboardView.delegateSelect = self;
     }
     return _storyboardView;
@@ -255,8 +259,8 @@
 
 - (KNC_MeituContentView *)meituContentView{
     if (!_meituContentView) {
-         CGSize contentSize = CGSizeMake(SCREEN_Width - 40, (SCREEN_Width - 40) * 1.3334);
-        _meituContentView =[[KNC_MeituContentView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - contentSize.width)/2.0f, (SCREEN_Height - 33 - TabMustAdd - contentSize.height)/2.0f, contentSize.width,contentSize.height)];
+         CGSize contentSize = CGSizeMake(KNC_SCREEN_W - 40, (KNC_SCREEN_W - 40) * 1.3334);
+        _meituContentView =[[KNC_MeituContentView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - contentSize.width)/2.0f, (KNC_SCREEN_H - 33 - KNC_TabMustAdd - contentSize.height)/2.0f, contentSize.width,contentSize.height)];
         self.meituContentView.delegateMove = self;
         
     }
@@ -266,7 +270,7 @@
 
 - (UIButton *)editbutton{
     if (!_editbutton) {
-        _editbutton  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_Width*0.4, 40)];
+        _editbutton  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W*0.4, 40)];
         _editbutton.center = CGPointMake(self.view.width/2.0, CGRectGetMaxY(self.meituContentView.frame)+ 40);
         [_editbutton setBackgroundImage:GetImage(@"choose picture") forState:UIControlStateNormal];
 //        [_editbutton setTitle:@"选择图片" forState:UIControlStateNormal];

@@ -76,7 +76,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     }];
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-TabMustAdd - 50);
+        make.bottom.equalTo(self.view).offset(-KNC_TabMustAdd - 50);
         make.height.mas_equalTo(1);
     }];
     [self.bottomAddBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -147,11 +147,6 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
 // 打开相册
 - (void)knc_func_openPhoto{
     
-//    NSInteger maxCount = 5;
-//    if (isVip) {
-//        maxCount = 9;
-//    }
-   
      TZImagePickerController *imagePicker = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
      imagePicker.allowPickingOriginalPhoto = NO;
      imagePicker.allowPickingVideo = NO;
@@ -196,13 +191,6 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     [self knc_func_setInfo];
 }
 
-//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return UITableViewCellEditingStyleNone;
-//}
-//
-//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return YES;
-//}
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
 
     UIImage *image = self.assetArray[sourceIndexPath.row];
@@ -225,7 +213,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
         _assetEditTableView.delegate = self;
         _assetEditTableView.dataSource = self;
         [_assetEditTableView setEditing:YES animated:YES];
-        _assetEditTableView.contentInset = UIEdgeInsetsMake(20, 0,TabMustAdd , 0);
+        _assetEditTableView.contentInset = UIEdgeInsetsMake(20, 0,KNC_TabMustAdd , 0);
         _assetEditTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_assetEditTableView registerClass:[KNC_AddImageTableViewCell class] forCellReuseIdentifier:AddImageTableViewCellID];
     }
@@ -246,7 +234,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     if (!_mergeBtn) {
         _mergeBtn = [[UIButton alloc]init];
         [_mergeBtn setTitle:@"合并" forState:UIControlStateNormal];
-        [_mergeBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_mergeBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_mergeBtn addTarget:self action:@selector(mergeBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _mergeBtn;
@@ -257,7 +245,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
         _emptyBtn = [[UIButton alloc]init];
         _emptyBtn.layer.masksToBounds = YES;
         _emptyBtn.layer.cornerRadius = 20;
-        _emptyBtn.backgroundColor = PSColorTheme;
+        _emptyBtn.backgroundColor = KNCMianColor;
         [_emptyBtn setTitle:@"清空" forState:UIControlStateNormal];
         [_emptyBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_emptyBtn addTarget:self action:@selector(emptyBtnAction) forControlEvents:UIControlEventTouchUpInside];
@@ -268,7 +256,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     if (!_setBtn) {
         _setBtn = [[UIButton alloc]init];
         [_setBtn setTitle:@"设置" forState:UIControlStateNormal];
-        [_setBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_setBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_setBtn addTarget:self action:@selector(setBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _setBtn;
@@ -278,7 +266,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     if (!_bottomView) {
         _bottomView = [[UIView alloc]init];
         _bottomView.layer.borderWidth = 1;
-        _bottomView.layer.borderColor = PSColorSeparator.CGColor;
+        _bottomView.layer.borderColor = KNC_HexColor(0xeeeeee).CGColor;
     }
     return _bottomView;
 }
@@ -287,7 +275,7 @@ static NSString * const AddImageTableViewCellID = @"AddImageTableViewCell";
     if (!_bottomAddBtn) {
         _bottomAddBtn = [[UIButton alloc]init];
         [_bottomAddBtn setTitle:@"添加照片" forState:UIControlStateNormal];
-        [_bottomAddBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_bottomAddBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_bottomAddBtn addTarget:self action:@selector(bottomAddBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _bottomAddBtn;

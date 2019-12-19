@@ -33,9 +33,15 @@
 
 }
 
+//- (void)viewDidDisappear:(BOOL)animated{
+//    [super viewDidDisappear:animated];
+//    self.navigationController.navigationBar.hidden = NO;
+//
+//}
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+     self.navigationController.navigationBar.hidden = NO;
 }
 
 
@@ -113,7 +119,7 @@
 
 - (KNC_HomeCardCollectionView *)cardView{
     if (!_cardView) {
-        _cardView = [[KNC_HomeCardCollectionView alloc] initWithFrame:CGRectMake(0, 300+NavMustAdd, SCREEN_Width, 310)];
+        _cardView = [[KNC_HomeCardCollectionView alloc] initWithFrame:CGRectMake(0, 300+KNC_NavMustAdd, KNC_SCREEN_W, 310)];
         
         _cardView.delegate = self;
     }
