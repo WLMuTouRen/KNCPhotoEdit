@@ -82,21 +82,21 @@
         make.top.equalTo(self.mainScrollView).offset(20);
         make.left.equalTo(self.mainScrollView).offset(20);
         make.width.mas_equalTo(KNC_SCREEN_W -30);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(90);
     }];
     
      [self.mainScrollView addSubview:self.buyBtn];
     [self.buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
-           make.left.equalTo(self.mainScrollView).offset(20);
-           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
+           make.left.equalTo(self.mainScrollView).offset(10);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 20);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.yearBtn];
     [self.yearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
-           make.left.mas_equalTo(KNC_SCREEN_W/2 + 20);
-           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
+           make.left.mas_equalTo(KNC_SCREEN_W/2 + 10);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 20);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.restoreBtn];
@@ -116,8 +116,8 @@
     [self.mainScrollView addSubview:self.protolBtn];
     [self.protolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.rebackLB.mas_bottom).offset(20);
-           make.left.equalTo(self.mainScrollView).offset(KNC_SCREEN_W/4 - 20);
-           make.width.mas_equalTo(KNC_SCREEN_W/4);
+           make.left.equalTo(self.mainScrollView).offset(KNC_SCREEN_W/5 - 20);
+           make.width.mas_equalTo(KNC_SCREEN_W/3);
            make.height.mas_equalTo(30);
        }];
     [self.mainScrollView addSubview:self.termUesBtn];
@@ -169,13 +169,13 @@
         _topImagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_W*0.5)];
         _topImagV.image = [UIImage imageNamed:@"bg1"];
         
-        UILabel *labe = [[UILabel alloc]init];
-        labe.text = @" 解锁所有功能";
-        labe.frame = CGRectMake(0, KNC_SCREEN_W*0.5 - 40, KNC_SCREEN_W, 30);
-        labe.textColor = UIColor.whiteColor;
-        labe.font = [UIFont boldSystemFontOfSize:22];
-        labe.textAlignment = NSTextAlignmentLeft;
-        [_topImagV addSubview:labe];
+//        UILabel *labe = [[UILabel alloc]init];
+//        labe.text = @" 解锁所有功能";
+//        labe.frame = CGRectMake(0, KNC_SCREEN_W*0.5 - 40, KNC_SCREEN_W, 30);
+//        labe.textColor = UIColor.whiteColor;
+//        labe.font = [UIFont boldSystemFontOfSize:22];
+//        labe.textAlignment = NSTextAlignmentLeft;
+//        [_topImagV addSubview:labe];
     }
     return _topImagV;
 }
@@ -194,7 +194,7 @@
 -(UIButton *)buyBtn{
     if (!_buyBtn) {
         _buyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_buyBtn setBackgroundImage:GetImage(@"mouthBuy") forState:UIControlStateNormal];
+        [_buyBtn setBackgroundImage:GetImage(@"yue_vip") forState:UIControlStateNormal];
         [_buyBtn addTarget:self action:@selector(mouthBuyBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buyBtn;
@@ -203,7 +203,7 @@
 -(UIButton *)yearBtn{
     if (!_yearBtn) {
         _yearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_yearBtn setBackgroundImage:GetImage(@"yearBuy") forState:UIControlStateNormal];
+        [_yearBtn setBackgroundImage:GetImage(@"nian_vip") forState:UIControlStateNormal];
         [_yearBtn addTarget:self action:@selector(yearBuyBtnClick)
            forControlEvents:UIControlEventTouchUpInside];
     }
@@ -213,13 +213,14 @@
 -(UIButton *)protolBtn{
     if (!_protolBtn) {
         _protolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_protolBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
-        _protolBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-        [_protolBtn setTitle:@"隐私协议" forState:UIControlStateNormal];
+        [_protolBtn setImage:[UIImage imageNamed:@"yinsi"] forState:UIControlStateNormal];
+//        [_protolBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+//        _protolBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+//        [_protolBtn setTitle:@"隐私协议" forState:UIControlStateNormal];
         [_protolBtn addTarget:self action:@selector(protolBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _protolBtn.layer.cornerRadius = 5;
-        _protolBtn.layer.masksToBounds = YES;
-        [_protolBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
+//        _protolBtn.layer.cornerRadius = 5;
+//        _protolBtn.layer.masksToBounds = YES;
+//        [_protolBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
     }
     return _protolBtn;
 }
@@ -228,20 +229,21 @@
 -(UIButton *)termUesBtn{
     if (!_termUesBtn) {
         _termUesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_termUesBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
-        _termUesBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-        [_termUesBtn setTitle:@"自动续费协议" forState:UIControlStateNormal];
+        [_termUesBtn setImage:[UIImage imageNamed:@"zidongxufei"] forState:UIControlStateNormal];
+//        [_termUesBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+//        _termUesBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+//        [_termUesBtn setTitle:@"自动续费协议" forState:UIControlStateNormal];
         [_termUesBtn addTarget:self action:@selector(termUesBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _termUesBtn.layer.cornerRadius = 5;
-        _termUesBtn.layer.masksToBounds = YES;
-        [_termUesBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
+//        _termUesBtn.layer.cornerRadius = 5;
+//        _termUesBtn.layer.masksToBounds = YES;
+//        [_termUesBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
     }
     return _termUesBtn;
 }
 -(UIButton *)restoreBtn{
     if (!_restoreBtn) {
         _restoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_restoreBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+        [_restoreBtn setTitleColor:KNC_RGBColor(3, 3, 3) forState:UIControlStateNormal];
         _restoreBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_restoreBtn setTitle:@"恢复购买项目" forState:UIControlStateNormal];
         [_restoreBtn addTarget:self action:@selector(restoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -276,10 +278,10 @@
 -(UILabel *)buyTipsLB{
     if (!_buyTipsLB) {
         _buyTipsLB = [[UILabel alloc]init];
-        _buyTipsLB.text = @"1、使用专享GIF动图\n2、拼长图，趣味拼图以及网页截图全部功能\n3、去除广告，去水印，畅享清爽体验";
+        _buyTipsLB.text = @"VIP专属功能\n\n1、解锁GIF动图，趣味拼图功能\n\n2、去除水印，畅享体验全部功能";
         _buyTipsLB.numberOfLines = 0;
-        _buyTipsLB.textColor = KNC_RGBColor(255, 255, 255);
-        _buyTipsLB.font = [UIFont systemFontOfSize:16];
+        _buyTipsLB.textColor = KNC_RGBColor(3, 3, 3);
+        _buyTipsLB.font = [UIFont systemFontOfSize:15];
     }
     return _buyTipsLB;
 }
@@ -296,7 +298,7 @@
         _rebackLB.enabledTextCheckingTypes = NSTextCheckingTypeLink;
         _rebackLB.delegate = self;
         
-        _rebackLB.text = @"1.服务名称：长图拼接会员连续包月（1个月）、长图拼接会员连续包年（12个月）\n\n2.价格：连续包月产品为30/月，连续包年产品为238/年\n\n3.购买自动订阅会员的账号，会在每个月订阅到期前24小时，从您的iTunes账号中扣款，扣款成功后顺延一个订阅周期。\n\n4.如需取消订阅，请手动打开苹果手机“设置”-->进入“iTunes Store 与 app Store” -->点击“Apple ID”，选择“查看Apple ID”，进入“账户设置”页面，点击“订阅”，选择长图拼接会员服务取消订阅即可，如未在结束的至少24小时前关闭订阅的，将视为您同意继续授权，此订阅将会自动续订。订阅可以由用户管理，购买后转到用户的帐户设置可以关闭自动续订您可以通过以下网址取消订阅：https://support.apple.com/en-us/HT202039";
+        _rebackLB.text = @"1.服务名称：天天拼图秀会员连续包月（1个月）、天天拼图秀会员连续包年（12个月）\n\n2.价格：连续包月产品为30/月，连续包年产品为198/年\n\n3.购买自动订阅会员的账号，会在每个月订阅到期前24小时，从您的iTunes账号中扣款，扣款成功后顺延一个订阅周期。\n\n4.如需取消订阅，请手动打开苹果手机“设置”-->进入“iTunes Store 与 app Store” -->点击“Apple ID”，选择“查看Apple ID”，进入“账户设置”页面，点击“订阅”，选择天天拼图秀会员服务取消订阅即可，如未在结束的至少24小时前关闭订阅的，将视为您同意继续授权，此订阅将会自动续订。订阅可以由用户管理，购买后转到用户的帐户设置可以关闭自动续订您可以通过以下网址取消订阅：https://support.apple.com/en-us/HT202039";
         
         NSRange range = [_rebackLB.text rangeOfString:@"https://support.apple.com/en-us/HT202039"];
         [_rebackLB addLinkToURL:[NSURL URLWithString:@"https://support.apple.com/en-us/HT202039"] withRange:range];

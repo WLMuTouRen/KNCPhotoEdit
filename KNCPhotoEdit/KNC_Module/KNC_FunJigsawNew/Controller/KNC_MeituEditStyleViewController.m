@@ -272,8 +272,8 @@
     if (!_editbutton) {
         _editbutton  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W*0.4, 40)];
         _editbutton.center = CGPointMake(self.view.width/2.0, CGRectGetMaxY(self.meituContentView.frame)+ 40);
-        [_editbutton setBackgroundImage:GetImage(@"choose picture") forState:UIControlStateNormal];
-//        [_editbutton setTitle:@"选择图片" forState:UIControlStateNormal];
+        [_editbutton setBackgroundImage:GetImage(@"choosePicture") forState:UIControlStateNormal];
+        [_editbutton setTitle:@"选择图片" forState:UIControlStateNormal];
 //        [_editbutton.titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
 //        [_editbutton.layer setCornerRadius:5.0f];
 //        [_editbutton setClipsToBounds:YES];

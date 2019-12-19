@@ -104,27 +104,25 @@
     }
     if(indexPath.section == 0){
         UIButton *long_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, (KNC_SCREEN_W - 80) / 2 , 120)];
-        long_Btn.backgroundColor = [UIColor redColor];
+        [long_Btn setImage:[UIImage imageNamed:@"long_image"] forState:UIControlStateNormal];
         [long_Btn addTarget:self action:@selector(clickLongBtn) forControlEvents:UIControlEventTouchUpInside];
         [cell addSubview:long_Btn];
         
         UIButton *web_Btn = [[UIButton alloc]initWithFrame:CGRectMake(60 + (KNC_SCREEN_W - 80) / 2 , 5, (KNC_SCREEN_W - 80) / 2 , 120)];
-        web_Btn.backgroundColor = [UIColor redColor];
+        [web_Btn setImage:[UIImage imageNamed:@"Web_image"] forState:UIControlStateNormal];
         [web_Btn addTarget:self action:@selector(clickWebBtn) forControlEvents:UIControlEventTouchUpInside];
-
         [cell addSubview:web_Btn];
     }else{
         if(indexPath.row == 0){
             UIButton *fun_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, KNC_SCREEN_W - 40 , 120)];
-            fun_Btn.backgroundColor = [UIColor redColor];
+            [fun_Btn setImage:[UIImage imageNamed:@"fun_image"] forState:UIControlStateNormal];
             [fun_Btn addTarget:self action:@selector(clickFunBtn) forControlEvents:UIControlEventTouchUpInside];
 
             [cell addSubview:fun_Btn];
         }else{
             UIButton *gif_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, KNC_SCREEN_W - 40 , 120)];
-            gif_Btn.backgroundColor = [UIColor redColor];
+            [gif_Btn setImage:[UIImage imageNamed:@"gif_image"] forState:UIControlStateNormal];
             [gif_Btn addTarget:self action:@selector(clickGifBtn) forControlEvents:UIControlEventTouchUpInside];
-
             [cell addSubview:gif_Btn];
         }
     }
@@ -211,8 +209,8 @@
 
 - (UIImageView *)bannerView{
     if (!_bannerView) {
-        _bannerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, 280)];
-        _bannerView.image = [UIImage imageNamed:@"home_banner_iamge"];
+        _bannerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, 240)];
+        _bannerView.image = [UIImage imageNamed:@"home_banner"];
         _bannerView.userInteractionEnabled = YES;
         
        
