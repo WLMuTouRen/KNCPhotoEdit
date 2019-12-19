@@ -298,7 +298,7 @@
         _rebackLB.enabledTextCheckingTypes = NSTextCheckingTypeLink;
         _rebackLB.delegate = self;
         
-        _rebackLB.text = @"1.服务名称：长图拼接会员连续包月（1个月）、长图拼接会员连续包年（12个月）\n\n2.价格：连续包月产品为30/月，连续包年产品为238/年\n\n3.购买自动订阅会员的账号，会在每个月订阅到期前24小时，从您的iTunes账号中扣款，扣款成功后顺延一个订阅周期。\n\n4.如需取消订阅，请手动打开苹果手机“设置”-->进入“iTunes Store 与 app Store” -->点击“Apple ID”，选择“查看Apple ID”，进入“账户设置”页面，点击“订阅”，选择长图拼接会员服务取消订阅即可，如未在结束的至少24小时前关闭订阅的，将视为您同意继续授权，此订阅将会自动续订。订阅可以由用户管理，购买后转到用户的帐户设置可以关闭自动续订您可以通过以下网址取消订阅：https://support.apple.com/en-us/HT202039";
+        _rebackLB.text = @"1.服务名称：天天拼图秀会员连续包月（1个月）、天天拼图秀会员连续包年（12个月）\n\n2.价格：连续包月产品为30/月，连续包年产品为198/年\n\n3.购买自动订阅会员的账号，会在每个月订阅到期前24小时，从您的iTunes账号中扣款，扣款成功后顺延一个订阅周期。\n\n4.如需取消订阅，请手动打开苹果手机“设置”-->进入“iTunes Store 与 app Store” -->点击“Apple ID”，选择“查看Apple ID”，进入“账户设置”页面，点击“订阅”，选择天天拼图秀会员服务取消订阅即可，如未在结束的至少24小时前关闭订阅的，将视为您同意继续授权，此订阅将会自动续订。订阅可以由用户管理，购买后转到用户的帐户设置可以关闭自动续订您可以通过以下网址取消订阅：https://support.apple.com/en-us/HT202039";
         
         NSRange range = [_rebackLB.text rangeOfString:@"https://support.apple.com/en-us/HT202039"];
         [_rebackLB addLinkToURL:[NSURL URLWithString:@"https://support.apple.com/en-us/HT202039"] withRange:range];
