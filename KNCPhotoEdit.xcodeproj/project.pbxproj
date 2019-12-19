@@ -1293,9 +1293,11 @@
 			baseConfigurationReference = 70D68977AF371B07DF6E0375 /* Pods-KNCPhotoEdit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
+
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1320,9 +1322,11 @@
 			baseConfigurationReference = 502DB3A55E8E3E38D83B3E1B /* Pods-KNCPhotoEdit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
+
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
