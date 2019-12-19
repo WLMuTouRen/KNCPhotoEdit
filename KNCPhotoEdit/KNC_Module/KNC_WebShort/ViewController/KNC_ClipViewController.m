@@ -54,9 +54,7 @@
         make.width.mas_equalTo(40);
         make.height.mas_equalTo(20);
     }];
-    
-    
-    // Do any additional setup after loading the view.
+
 }
 
 

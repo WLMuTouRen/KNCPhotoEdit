@@ -13,7 +13,7 @@
 @property (nonatomic ,strong) WKWebView *onlineWebView;
 @property (nonatomic,strong) NSMutableArray *titleArray;
 @property (nonatomic,strong) UIProgressView *progressView;
-@property (nonatomic,assign) BOOL isLookAd;//是否看过广告
+
 @end
 
 @implementation KNC_WebViewController
@@ -31,7 +31,6 @@
     [super viewDidLoad];
     [self performSelectorOnMainThread:@selector(showProgress) withObject:nil waitUntilDone:NO];
     self.view.backgroundColor = UIColor.whiteColor;
-    self.isLookAd = NO;
     self.navigationItem.title = self.titleStr;
     
     if (!self.ishiddenBottom) {
@@ -99,15 +98,19 @@
 
 - (void)popmessageCurrent{
     
-    if (!isVip) {
-        KNC_BuyViewController *buyVc =   [[KNC_BuyViewController alloc]init];
-        [self.navigationController pushViewController:buyVc animated:YES];
-    }else{
-        [SVProgressHUD showWithStatus:@"截图中..."];
-        KNC_SnapshotHandler.defaultHandler.delegate = self;
-        
-        [KNC_SnapshotHandler.defaultHandler knc_snapshotForView:self.onlineWebView];
-    }
+//    if (!isVip) {
+//        KNC_BuyViewController *buyVc =   [[KNC_BuyViewController alloc]init];
+//        [self.navigationController pushViewController:buyVc animated:YES];
+//    }else{
+//        [SVProgressHUD showWithStatus:@"截图中..."];
+//        KNC_SnapshotHandler.defaultHandler.delegate = self;
+//
+//        [KNC_SnapshotHandler.defaultHandler knc_snapshotForView:self.onlineWebView];
+//    }
+    
+    [SVProgressHUD showWithStatus:@"截图中..."];
+    KNC_SnapshotHandler.defaultHandler.delegate = self;
+    [KNC_SnapshotHandler.defaultHandler knc_snapshotForView:self.onlineWebView];
 
     
 }

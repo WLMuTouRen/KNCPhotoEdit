@@ -7,7 +7,6 @@
 //
 
 #import "KNC_HomeViewController.h"
-#import "KNC_FunJigsawController.h"
 #import "KNC_HomeCardCollectionView.h"
 #import "KNC_AddImageViewController.h"
 #import "KNC_imagePickerController.h"

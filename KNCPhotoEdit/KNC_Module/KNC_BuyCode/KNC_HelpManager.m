@@ -517,7 +517,7 @@
 
 
 
-+(BOOL)isVipLongFigure{
++(BOOL)isVipPhotoEdit{
     
     NSString *vip = [KNC_HelpManager objectForKey:@"ISBuyVip"];
     

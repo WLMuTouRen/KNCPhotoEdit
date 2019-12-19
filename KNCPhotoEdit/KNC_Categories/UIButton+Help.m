@@ -1,9 +1,9 @@
 //
 //  UIButton+help.m
-//  Tuotuo
+//  PSLongFigure
 //
-//  Created by Apple on 14-1-14.
-//  Copyright (c) 2014年 Gaialine. All rights reserved.
+//  Created by ghostlord on 2019/12/10.
+//  Copyright © 2019年 ghostlord. All rights reserved.
 //
 
 #import "UIButton+Help.h"

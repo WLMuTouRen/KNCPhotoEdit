@@ -72,12 +72,6 @@
 		044D057223AB26AC00A2FC34 /* KNC_HelpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D04F323AB26AC00A2FC34 /* KNC_HelpManager.m */; };
 		044D057323AB26AC00A2FC34 /* KNC_PayMannage.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D04F423AB26AC00A2FC34 /* KNC_PayMannage.m */; };
 		044D057423AB26AC00A2FC34 /* KNC_BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D04F723AB26AC00A2FC34 /* KNC_BuyViewController.m */; };
-		044D057523AB26AC00A2FC34 /* KNC_FunJigsawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D04FB23AB26AC00A2FC34 /* KNC_FunJigsawController.m */; };
-		044D057623AB26AC00A2FC34 /* KNC_FunJigsawController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044D04FC23AB26AC00A2FC34 /* KNC_FunJigsawController.xib */; };
-		044D057723AB26AC00A2FC34 /* KNC_FunJigsawItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D04FF23AB26AC00A2FC34 /* KNC_FunJigsawItem.m */; };
-		044D057823AB26AC00A2FC34 /* KNC_FunJigsawModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D050223AB26AC00A2FC34 /* KNC_FunJigsawModel.m */; };
-		044D057923AB26AC00A2FC34 /* KNC_FunJigsawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D050523AB26AC00A2FC34 /* KNC_FunJigsawView.m */; };
-		044D057A23AB26AC00A2FC34 /* KNC_JigsawViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D050623AB26AC00A2FC34 /* KNC_JigsawViewCell.m */; };
 		044D057B23AB26AC00A2FC34 /* KNC_PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D050C23AB26AC00A2FC34 /* KNC_PositionViewController.m */; };
 		044D057C23AB26AC00A2FC34 /* KNC_GifSynthesisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D050E23AB26AC00A2FC34 /* KNC_GifSynthesisViewController.m */; };
 		044D057D23AB26AC00A2FC34 /* KNC_GifSynthesisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D051023AB26AC00A2FC34 /* KNC_GifSynthesisModel.m */; };
@@ -115,7 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044D038123AB259700A2FC34 /* KNCPhotoEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNCPhotoEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		044D038123AB259700A2FC34 /* 天天拼图秀.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "天天拼图秀.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D038423AB259700A2FC34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		044D038523AB259700A2FC34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		044D038A23AB259700A2FC34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -223,17 +217,6 @@
 		044D04F623AB26AC00A2FC34 /* KNC_HelpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_HelpManager.h; sourceTree = "<group>"; };
 		044D04F723AB26AC00A2FC34 /* KNC_BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_BuyViewController.m; sourceTree = "<group>"; };
 		044D04F823AB26AC00A2FC34 /* KNC_PayMannage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_PayMannage.h; sourceTree = "<group>"; };
-		044D04FB23AB26AC00A2FC34 /* KNC_FunJigsawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_FunJigsawController.m; sourceTree = "<group>"; };
-		044D04FC23AB26AC00A2FC34 /* KNC_FunJigsawController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNC_FunJigsawController.xib; sourceTree = "<group>"; };
-		044D04FD23AB26AC00A2FC34 /* KNC_FunJigsawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_FunJigsawController.h; sourceTree = "<group>"; };
-		044D04FF23AB26AC00A2FC34 /* KNC_FunJigsawItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_FunJigsawItem.m; sourceTree = "<group>"; };
-		044D050023AB26AC00A2FC34 /* KNC_FunJigsawModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_FunJigsawModel.h; sourceTree = "<group>"; };
-		044D050123AB26AC00A2FC34 /* KNC_FunJigsawItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_FunJigsawItem.h; sourceTree = "<group>"; };
-		044D050223AB26AC00A2FC34 /* KNC_FunJigsawModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_FunJigsawModel.m; sourceTree = "<group>"; };
-		044D050423AB26AC00A2FC34 /* KNC_JigsawViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_JigsawViewCell.h; sourceTree = "<group>"; };
-		044D050523AB26AC00A2FC34 /* KNC_FunJigsawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_FunJigsawView.m; sourceTree = "<group>"; };
-		044D050623AB26AC00A2FC34 /* KNC_JigsawViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_JigsawViewCell.m; sourceTree = "<group>"; };
-		044D050723AB26AC00A2FC34 /* KNC_FunJigsawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_FunJigsawView.h; sourceTree = "<group>"; };
 		044D050923AB26AC00A2FC34 /* GIFMainPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFMainPath.h; sourceTree = "<group>"; };
 		044D050B23AB26AC00A2FC34 /* KNC_GifSynthesisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_GifSynthesisViewController.h; sourceTree = "<group>"; };
 		044D050C23AB26AC00A2FC34 /* KNC_PositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_PositionViewController.m; sourceTree = "<group>"; };
@@ -267,6 +250,7 @@
 		044D053123AB26AC00A2FC34 /* KNC_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_HomeViewController.m; sourceTree = "<group>"; };
 		044D058E23AB4E4000A2FC34 /* KNC_WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNC_WaterFlowLayout.h; sourceTree = "<group>"; };
 		044D058F23AB4E4B00A2FC34 /* KNC_WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNC_WaterFlowLayout.m; sourceTree = "<group>"; };
+		04FC0BE323AB7DD2007A77D0 /* 天天拼图秀.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "天天拼图秀.entitlements"; sourceTree = "<group>"; };
 		0B50C76DF04A2FF669AB0971 /* Pods_KNCPhotoEdit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNCPhotoEdit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		502DB3A55E8E3E38D83B3E1B /* Pods-KNCPhotoEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNCPhotoEdit.release.xcconfig"; path = "Target Support Files/Pods-KNCPhotoEdit/Pods-KNCPhotoEdit.release.xcconfig"; sourceTree = "<group>"; };
 		70D68977AF371B07DF6E0375 /* Pods-KNCPhotoEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNCPhotoEdit.debug.xcconfig"; path = "Target Support Files/Pods-KNCPhotoEdit/Pods-KNCPhotoEdit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,7 +297,7 @@
 		044D038223AB259700A2FC34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				044D038123AB259700A2FC34 /* KNCPhotoEdit.app */,
+				044D038123AB259700A2FC34 /* 天天拼图秀.app */,
 				044D039C23AB259900A2FC34 /* KNCPhotoEditTests.xctest */,
 				044D03A723AB259900A2FC34 /* KNCPhotoEditUITests.xctest */,
 			);
@@ -323,6 +307,7 @@
 		044D038323AB259700A2FC34 /* KNCPhotoEdit */ = {
 			isa = PBXGroup;
 			children = (
+				04FC0BE323AB7DD2007A77D0 /* 天天拼图秀.entitlements */,
 				044D049623AB26AB00A2FC34 /* KNC_Base */,
 				044D03BF23AB26AB00A2FC34 /* KNC_Categories */,
 				044D03B923AB26AB00A2FC34 /* Macro */,
@@ -373,12 +358,12 @@
 		044D03BF23AB26AB00A2FC34 /* KNC_Categories */ = {
 			isa = PBXGroup;
 			children = (
-				044D03C023AB26AB00A2FC34 /* UIImage+Help.m */,
-				044D03C123AB26AB00A2FC34 /* UIView+Frame.m */,
+				044D03C423AB26AB00A2FC34 /* UIButton+Help.h */,
 				044D03C223AB26AB00A2FC34 /* UIButton+Help.m */,
 				044D03C323AB26AB00A2FC34 /* UIImage+Help.h */,
-				044D03C423AB26AB00A2FC34 /* UIButton+Help.h */,
+				044D03C023AB26AB00A2FC34 /* UIImage+Help.m */,
 				044D03C523AB26AB00A2FC34 /* UIView+Frame.h */,
+				044D03C123AB26AB00A2FC34 /* UIView+Frame.m */,
 			);
 			path = KNC_Categories;
 			sourceTree = "<group>";
@@ -459,7 +444,6 @@
 				044D04DC23AB26AC00A2FC34 /* KNC_Watermark */,
 				044D04E023AB26AC00A2FC34 /* KNC_Piiic */,
 				044D04F023AB26AC00A2FC34 /* KNC_BuyCode */,
-				044D04F923AB26AC00A2FC34 /* KNC_FunJigsaw */,
 				044D050823AB26AC00A2FC34 /* KNC_GifSynthesis */,
 				044D052423AB26AC00A2FC34 /* KNC_Home */,
 			);
@@ -488,10 +472,10 @@
 		044D04A223AB26AB00A2FC34 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				044D04A323AB26AB00A2FC34 /* KNC_MosaicManager.m */,
-				044D04A423AB26AB00A2FC34 /* KNC_MosaicPath.m */,
 				044D04A523AB26AB00A2FC34 /* KNC_MosaicManager.h */,
+				044D04A323AB26AB00A2FC34 /* KNC_MosaicManager.m */,
 				044D04A623AB26AB00A2FC34 /* KNC_MosaicPath.h */,
+				044D04A423AB26AB00A2FC34 /* KNC_MosaicPath.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -591,12 +575,12 @@
 		044D04D523AB26AC00A2FC34 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				044D04D623AB26AC00A2FC34 /* KNC_WebViewController.m */,
 				044D04D723AB26AC00A2FC34 /* KNC_ClipViewController.h */,
-				044D04D823AB26AC00A2FC34 /* KNC_WebShortController.m */,
 				044D04D923AB26AC00A2FC34 /* KNC_ClipViewController.m */,
-				044D04DA23AB26AC00A2FC34 /* KNC_WebViewController.h */,
 				044D04DB23AB26AC00A2FC34 /* KNC_WebShortController.h */,
+				044D04D823AB26AC00A2FC34 /* KNC_WebShortController.m */,
+				044D04DA23AB26AC00A2FC34 /* KNC_WebViewController.h */,
+				044D04D623AB26AC00A2FC34 /* KNC_WebViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -674,48 +658,6 @@
 			path = KNC_BuyCode;
 			sourceTree = "<group>";
 		};
-		044D04F923AB26AC00A2FC34 /* KNC_FunJigsaw */ = {
-			isa = PBXGroup;
-			children = (
-				044D04FA23AB26AC00A2FC34 /* Controller */,
-				044D04FE23AB26AC00A2FC34 /* Item */,
-				044D050323AB26AC00A2FC34 /* View */,
-			);
-			path = KNC_FunJigsaw;
-			sourceTree = "<group>";
-		};
-		044D04FA23AB26AC00A2FC34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				044D04FB23AB26AC00A2FC34 /* KNC_FunJigsawController.m */,
-				044D04FC23AB26AC00A2FC34 /* KNC_FunJigsawController.xib */,
-				044D04FD23AB26AC00A2FC34 /* KNC_FunJigsawController.h */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		044D04FE23AB26AC00A2FC34 /* Item */ = {
-			isa = PBXGroup;
-			children = (
-				044D04FF23AB26AC00A2FC34 /* KNC_FunJigsawItem.m */,
-				044D050023AB26AC00A2FC34 /* KNC_FunJigsawModel.h */,
-				044D050123AB26AC00A2FC34 /* KNC_FunJigsawItem.h */,
-				044D050223AB26AC00A2FC34 /* KNC_FunJigsawModel.m */,
-			);
-			path = Item;
-			sourceTree = "<group>";
-		};
-		044D050323AB26AC00A2FC34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				044D050423AB26AC00A2FC34 /* KNC_JigsawViewCell.h */,
-				044D050523AB26AC00A2FC34 /* KNC_FunJigsawView.m */,
-				044D050623AB26AC00A2FC34 /* KNC_JigsawViewCell.m */,
-				044D050723AB26AC00A2FC34 /* KNC_FunJigsawView.h */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		044D050823AB26AC00A2FC34 /* KNC_GifSynthesis */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,9 +692,9 @@
 		044D051223AB26AC00A2FC34 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				044D051723AB26AC00A2FC34 /* KNC_GIFSettingView.h */,
 				044D051323AB26AC00A2FC34 /* KNC_GIFSettingView.m */,
 				044D051423AB26AC00A2FC34 /* Cell */,
-				044D051723AB26AC00A2FC34 /* KNC_GIFSettingView.h */,
 				044D051823AB26AC00A2FC34 /* ZPActionsheet */,
 				044D051F23AB26AC00A2FC34 /* GifView */,
 			);
@@ -771,12 +713,12 @@
 		044D051823AB26AC00A2FC34 /* ZPActionsheet */ = {
 			isa = PBXGroup;
 			children = (
-				044D051923AB26AC00A2FC34 /* ActionSheetView.m */,
-				044D051A23AB26AC00A2FC34 /* VerButton.m */,
 				044D051B23AB26AC00A2FC34 /* ActionButton.h */,
-				044D051C23AB26AC00A2FC34 /* ActionSheetView.h */,
-				044D051D23AB26AC00A2FC34 /* VerButton.h */,
 				044D051E23AB26AC00A2FC34 /* ActionButton.m */,
+				044D051C23AB26AC00A2FC34 /* ActionSheetView.h */,
+				044D051923AB26AC00A2FC34 /* ActionSheetView.m */,
+				044D051D23AB26AC00A2FC34 /* VerButton.h */,
+				044D051A23AB26AC00A2FC34 /* VerButton.m */,
 			);
 			path = ZPActionsheet;
 			sourceTree = "<group>";
@@ -784,10 +726,10 @@
 		044D051F23AB26AC00A2FC34 /* GifView */ = {
 			isa = PBXGroup;
 			children = (
-				044D052023AB26AC00A2FC34 /* GifAnimatedImage.m */,
-				044D052123AB26AC00A2FC34 /* GifAnimatedImageView.m */,
 				044D052223AB26AC00A2FC34 /* GifAnimatedImage.h */,
+				044D052023AB26AC00A2FC34 /* GifAnimatedImage.m */,
 				044D052323AB26AC00A2FC34 /* GifAnimatedImageView.h */,
+				044D052123AB26AC00A2FC34 /* GifAnimatedImageView.m */,
 			);
 			path = GifView;
 			sourceTree = "<group>";
@@ -878,7 +820,7 @@
 			);
 			name = KNCPhotoEdit;
 			productName = KNCPhotoEdit;
-			productReference = 044D038123AB259700A2FC34 /* KNCPhotoEdit.app */;
+			productReference = 044D038123AB259700A2FC34 /* 天天拼图秀.app */;
 			productType = "com.apple.product-type.application";
 		};
 		044D039B23AB259900A2FC34 /* KNCPhotoEditTests */ = {
@@ -973,7 +915,6 @@
 				044D055323AB26AC00A2FC34 /* number_five_style_3.plist in Resources */,
 				044D055223AB26AC00A2FC34 /* number_three_style_1.plist in Resources */,
 				044D055023AB26AC00A2FC34 /* number_three_style_3.plist in Resources */,
-				044D057623AB26AC00A2FC34 /* KNC_FunJigsawController.xib in Resources */,
 				044D055F23AB26AC00A2FC34 /* number_five_style_2.plist in Resources */,
 				044D055C23AB26AC00A2FC34 /* number_three_style_2.plist in Resources */,
 				044D055423AB26AC00A2FC34 /* number_two_style_1.plist in Resources */,
@@ -1085,20 +1026,16 @@
 				044D056C23AB26AC00A2FC34 /* KNC_FinishImageViewController.m in Sources */,
 				044D056723AB26AC00A2FC34 /* KNC_WebViewController.m in Sources */,
 				044D054323AB26AC00A2FC34 /* KNC_BaseViewController.m in Sources */,
-				044D057923AB26AC00A2FC34 /* KNC_FunJigsawView.m in Sources */,
 				044D053523AB26AC00A2FC34 /* UIButton+Help.m in Sources */,
 				044D054723AB26AC00A2FC34 /* KNC_MosaicPath.m in Sources */,
-				044D057723AB26AC00A2FC34 /* KNC_FunJigsawItem.m in Sources */,
 				044D056B23AB26AC00A2FC34 /* KNC_AddImageViewController.m in Sources */,
 				044D039723AB259900A2FC34 /* main.m in Sources */,
 				044D054823AB26AC00A2FC34 /* KNC_MosaicView.m in Sources */,
 				044D054123AB26AC00A2FC34 /* AppDelegate+JPush.m in Sources */,
 				044D056D23AB26AC00A2FC34 /* KNC_CompoundViewController.m in Sources */,
 				044D058223AB26AC00A2FC34 /* ActionButton.m in Sources */,
-				044D057523AB26AC00A2FC34 /* KNC_FunJigsawController.m in Sources */,
 				044D057B23AB26AC00A2FC34 /* KNC_PositionViewController.m in Sources */,
 				044D054523AB26AC00A2FC34 /* KNC_MosaicViewController.m in Sources */,
-				044D057823AB26AC00A2FC34 /* KNC_FunJigsawModel.m in Sources */,
 				044D056923AB26AC00A2FC34 /* KNC_ClipViewController.m in Sources */,
 				044D058823AB26AC00A2FC34 /* KNC_HomeCardCollectionViewCell.m in Sources */,
 				044D057D23AB26AC00A2FC34 /* KNC_GifSynthesisModel.m in Sources */,
@@ -1107,7 +1044,6 @@
 				044D053223AB26AC00A2FC34 /* Constants.m in Sources */,
 				044D053D23AB26AC00A2FC34 /* IndentTextField.m in Sources */,
 				044D056423AB26AC00A2FC34 /* KNC_MeituSpliceContentView.m in Sources */,
-				044D057A23AB26AC00A2FC34 /* KNC_JigsawViewCell.m in Sources */,
 				044D053E23AB26AC00A2FC34 /* TTTAttributedLabel.m in Sources */,
 				044D056523AB26AC00A2FC34 /* KNC_MeituImageEditView.m in Sources */,
 				044D056F23AB26AC00A2FC34 /* KNC_AddImageTableViewCell.m in Sources */,
@@ -1293,11 +1229,10 @@
 			baseConfigurationReference = 70D68977AF371B07DF6E0375 /* Pods-KNCPhotoEdit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
+				CODE_SIGN_ENTITLEMENTS = "KNCPhotoEdit/天天拼图秀.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
-
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1310,7 +1245,7 @@
 					"$(PROJECT_DIR)/KNCPhotoEdit/Vendor/ThirdParty/GPUImage/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dayday.photo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "天天拼图秀";
 				PROVISIONING_PROFILE_SPECIFIER = dev;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
@@ -1322,11 +1257,10 @@
 			baseConfigurationReference = 502DB3A55E8E3E38D83B3E1B /* Pods-KNCPhotoEdit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
+				CODE_SIGN_ENTITLEMENTS = "KNCPhotoEdit/天天拼图秀.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
-
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1339,7 +1273,7 @@
 					"$(PROJECT_DIR)/KNCPhotoEdit/Vendor/ThirdParty/GPUImage/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dayday.photo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "天天拼图秀";
 				PROVISIONING_PROFILE_SPECIFIER = dis;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";

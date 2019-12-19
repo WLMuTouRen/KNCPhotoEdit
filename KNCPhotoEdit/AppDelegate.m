@@ -27,20 +27,20 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[KNC_HomeViewController alloc] init]];
     [self.window makeKeyAndVisible];
     
-    [self ps_mmp_customCofigWithOptions:launchOptions];
+    [self knc_customCofigWithOptions:launchOptions];
     return YES;
 }
 
-- (void)ps_mmp_customCofigWithOptions:(NSDictionary *)options {
+- (void)knc_customCofigWithOptions:(NSDictionary *)options {
     // 推送
-    [self flow_jpushRegWithAppKey:@"c7bffa944bf3511dee69ae3c" launchOptions:options];
+    [self flow_jpushRegWithAppKey:@"c470877e4971aa01bbb9fba0" launchOptions:options];
     
     
 #ifdef DEBUG
     [MobClick setAutoPageEnabled:YES];
-    [UMConfigure initWithAppkey:@"5df9f0a1570df36e17000a1e" channel:@"Debug_ps_long_figure"];
+    [UMConfigure initWithAppkey:@"5dfb45cd0cafb28f66000628" channel:@"Debug_photo_edit"];
 #else
-    [UMConfigure initWithAppkey:@"5df9f0a1570df36e17000a1e" channel:@"Release_ps_long_figure"];
+    [UMConfigure initWithAppkey:@"5dfb45cd0cafb28f66000628" channel:@"Release_photo_edit"];
     [MobClick setAutoPageEnabled:YES];
 #endif
     

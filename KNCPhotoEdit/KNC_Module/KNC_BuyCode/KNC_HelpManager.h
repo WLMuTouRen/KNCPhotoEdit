@@ -69,7 +69,7 @@
 +(NSArray*)getLanguageArrayHaveAuto:(BOOL)isHaveAuto andExcludeName:(NSString*)nameStr;
 
 
-+(BOOL)isVipLongFigure;
++(BOOL)isVipPhotoEdit;
 +(NSString *)getSystemLanuge;
 
 @end

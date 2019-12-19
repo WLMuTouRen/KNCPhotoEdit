@@ -75,12 +75,11 @@
 #define strongSelf(weakRef)     __strong __typeof(weakRef)strongSelf = weakRef;
 
 //--------------是非购买
-#define isVip [KNC_HelpManager isVipLongFigure]
-
+#define isVip [KNC_HelpManager isVipPhotoEdit]
 //按月购买
-#define KNC_VIPMONTH @"longFigureVipMonth"
+#define KNC_VIPMONTH @"KNCPhotoEditVipMonth"
 //按年购买
-#define KNC_VIPYEAR @"longFigureVipYear"
+#define KNC_VIPYEAR @"KNCPhotoEditVipYear"
 
 #define KNC_POLICYURL @"https://www.jianshu.com/p/41d2bec2760a"
 #define KNC_RENEWURL @"https://www.jianshu.com/p/d6624a215e28"
