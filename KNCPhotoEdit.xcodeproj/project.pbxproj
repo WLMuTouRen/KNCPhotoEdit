@@ -1294,6 +1294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU23Y346G4;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1318,6 +1319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU23Y346G4;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = KNCPhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
