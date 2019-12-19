@@ -277,7 +277,7 @@
 -(UILabel *)buyTipsLB{
     if (!_buyTipsLB) {
         _buyTipsLB = [[UILabel alloc]init];
-        _buyTipsLB.text = @"1、使用专享GIF动图\n2、拼长图，趣味拼图以及网页截图全部功能\n3、去除广告，去水印，畅享清爽体验";
+        _buyTipsLB.text = @"1、解锁GIF动图，趣味拼图功能\n2、去除水印，畅享体验全部功能";
         _buyTipsLB.numberOfLines = 0;
         _buyTipsLB.textColor = RGBColor(255, 255, 255);
         _buyTipsLB.font = [UIFont systemFontOfSize:16];
