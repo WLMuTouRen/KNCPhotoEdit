@@ -156,8 +156,8 @@
  */
 +(UIImage*)ps_screenWidthWithImage:(UIImage *)image{
     CGSize size;
-    size.width = SCREEN_Width;
-    size.height = (image.size.height /SCREEN_Height) *SCREEN_Width;
+    size.width = KNC_SCREEN_W;
+    size.height = (image.size.height /KNC_SCREEN_H) *KNC_SCREEN_W;
     
     
     // 得到图片上下文，指定绘制范围

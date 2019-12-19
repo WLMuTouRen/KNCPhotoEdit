@@ -36,7 +36,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+     self.navigationController.navigationBar.hidden = NO;
 }
 
 
@@ -70,18 +70,18 @@
 //懒加载表格
 -(UITableView *)hh_tbv{
     if(!_hh_tbv){
-        _hh_tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_Height) style:UITableViewStylePlain];
+        _hh_tbv = [[UITableView alloc]initWithFrame:CGRectMake(0, -KNC_Status_H, KNC_SCREEN_W, KNC_SCREEN_H+KNC_Status_H) style:UITableViewStylePlain];
         _hh_tbv.delegate = self;
         _hh_tbv.dataSource = self;
         _hh_tbv.showsVerticalScrollIndicator = NO;
         _hh_tbv.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_hh_tbv];
-        [self.hh_tbv mas_makeConstraints:^(MASConstraintMaker *make) {
-               make.left.equalTo(self.view.mas_left).mas_offset(0);
-               make.top.equalTo(self.view.mas_top).mas_offset(0);
-               make.right.equalTo(self.view.mas_right).mas_offset(0);
-               make.height.mas_equalTo(SCREEN_Height);
-        }];
+//        [self.hh_tbv mas_makeConstraints:^(MASConstraintMaker *make) {
+//               make.left.equalTo(self.view.mas_left).mas_offset(0);
+//               make.top.equalTo(self.view.mas_top).mas_offset(-KNC_NavMustAdd);
+//               make.right.equalTo(self.view.mas_right).mas_offset(0);
+//               make.height.mas_equalTo(KNC_SCREEN_H);
+//        }];
         _hh_tbv.tableHeaderView = self.bannerView;
         
     }
@@ -104,25 +104,25 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
     }
     if(indexPath.section == 0){
-        UIButton *long_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, (SCREEN_Width - 80) / 2 , 120)];
+        UIButton *long_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, (KNC_SCREEN_W - 80) / 2 , 120)];
         long_Btn.backgroundColor = [UIColor redColor];
         [long_Btn addTarget:self action:@selector(clickLongBtn) forControlEvents:UIControlEventTouchUpInside];
         [cell addSubview:long_Btn];
         
-        UIButton *web_Btn = [[UIButton alloc]initWithFrame:CGRectMake(60 + (SCREEN_Width - 80) / 2 , 5, (SCREEN_Width - 80) / 2 , 120)];
+        UIButton *web_Btn = [[UIButton alloc]initWithFrame:CGRectMake(60 + (KNC_SCREEN_W - 80) / 2 , 5, (KNC_SCREEN_W - 80) / 2 , 120)];
         web_Btn.backgroundColor = [UIColor redColor];
         [web_Btn addTarget:self action:@selector(clickWebBtn) forControlEvents:UIControlEventTouchUpInside];
 
         [cell addSubview:web_Btn];
     }else{
         if(indexPath.row == 0){
-            UIButton *fun_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, SCREEN_Width - 40 , 120)];
+            UIButton *fun_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, KNC_SCREEN_W - 40 , 120)];
             fun_Btn.backgroundColor = [UIColor redColor];
             [fun_Btn addTarget:self action:@selector(clickFunBtn) forControlEvents:UIControlEventTouchUpInside];
 
             [cell addSubview:fun_Btn];
         }else{
-            UIButton *gif_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, SCREEN_Width - 40 , 120)];
+            UIButton *gif_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, KNC_SCREEN_W - 40 , 120)];
             gif_Btn.backgroundColor = [UIColor redColor];
             [gif_Btn addTarget:self action:@selector(clickGifBtn) forControlEvents:UIControlEventTouchUpInside];
 
@@ -141,7 +141,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *headV = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 22)];
+    UIView *headV = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, 22)];
     UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(20, 5, 100, 15)];
     lab.font = [UIFont systemFontOfSize:16 weight:0.4];
     if (section == 0) {
@@ -212,7 +212,7 @@
 
 - (UIImageView *)bannerView{
     if (!_bannerView) {
-        _bannerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 280)];
+        _bannerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, 280)];
         _bannerView.image = [UIImage imageNamed:@"home_banner_iamge"];
         _bannerView.userInteractionEnabled = YES;
         
@@ -221,21 +221,15 @@
     return _bannerView;
 }
 
-//- (UIImageView *)bgView{
-//    if (!_bgView) {
-//        _bgView = [[UIImageView alloc]init];
-//        _bgView.image = [UIImage imageNamed:@"home_bg_image"];
-//    }
-//    return _bgView;
-//}
-
+//
 //- (KNC_HomeCardCollectionView *)cardView{
 //    if (!_cardView) {
-//        _cardView = [[KNC_HomeCardCollectionView alloc] initWithFrame:CGRectMake(0, 300+NavMustAdd, SCREEN_Width, 310)];
-//
+//        _cardView = [[KNC_HomeCardCollectionView alloc] initWithFrame:CGRectMake(0, 300+KNC_NavMustAdd, KNC_SCREEN_W, 310)];
+//        
 //        _cardView.delegate = self;
 //    }
 //    return _cardView;
 //}
+
 
 @end

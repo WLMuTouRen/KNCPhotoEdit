@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(buySucessClick) name:@"paySuccess" object:nil];
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(buySucessClick) name:@"paySuccess" object:nil];
+//     Do any additional setup after loading the view.
 }
 
 -(void)buySucessClick{

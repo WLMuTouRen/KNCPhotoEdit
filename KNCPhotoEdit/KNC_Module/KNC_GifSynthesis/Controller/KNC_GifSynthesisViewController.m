@@ -124,21 +124,21 @@
         runMain(^{
             switch (btnTag) {
                 case 0:
-                    weakSelf.gifImage.frame = CGRectMake(SCREEN_Width*0.1, Nav_topH+SCREEN_Width*0.1, SCREEN_Width*0.8, SCREEN_Width*0.8);
+                    weakSelf.gifImage.frame = CGRectMake(KNC_SCREEN_W*0.1, KNC_Nav_topH+KNC_SCREEN_W*0.1, KNC_SCREEN_W*0.8, KNC_SCREEN_W*0.8);
                     break;
                     
                 case 1:
-                    weakSelf.gifImage.frame = CGRectMake(SCREEN_Width*0.1, Nav_topH+SCREEN_Width*0.3, SCREEN_Width*0.8, SCREEN_Width*0.4);
+                    weakSelf.gifImage.frame = CGRectMake(KNC_SCREEN_W*0.1, KNC_Nav_topH+KNC_SCREEN_W*0.3, KNC_SCREEN_W*0.8, KNC_SCREEN_W*0.4);
                     break;
                 case 2:
-                    weakSelf.gifImage.frame = CGRectMake(SCREEN_Width*0.2, Nav_topH+SCREEN_Width*0.1, SCREEN_Width*0.6, SCREEN_Width*0.8);
+                    weakSelf.gifImage.frame = CGRectMake(KNC_SCREEN_W*0.2, KNC_Nav_topH+KNC_SCREEN_W*0.1, KNC_SCREEN_W*0.6, KNC_SCREEN_W*0.8);
                     break;
                     
                 case 3:
-                    weakSelf.gifImage.frame = CGRectMake(SCREEN_Width*0.1, Nav_topH+SCREEN_Width*0.2, SCREEN_Width*0.8, SCREEN_Width*0.6);
+                    weakSelf.gifImage.frame = CGRectMake(KNC_SCREEN_W*0.1, KNC_Nav_topH+KNC_SCREEN_W*0.2, KNC_SCREEN_W*0.8, KNC_SCREEN_W*0.6);
                     break;
                 case 4:
-                    weakSelf.gifImage.frame = CGRectMake(SCREEN_Width*0.1, Nav_topH+SCREEN_Width*0.275, SCREEN_Width*0.8, SCREEN_Width*0.45);
+                    weakSelf.gifImage.frame = CGRectMake(KNC_SCREEN_W*0.1, KNC_Nav_topH+KNC_SCREEN_W*0.275, KNC_SCREEN_W*0.8, KNC_SCREEN_W*0.45);
                     break;
                         
                 default:break;
@@ -162,18 +162,18 @@
     if (!_gifImage) {
 //        GifAnimatedImage *image = [GifAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"gifImage" ofType:@".gif"]]];
         _gifImage = [[GifAnimatedImageView alloc] init];
-        _gifImage.backgroundColor = RGBColor(230, 230, 230);
+        _gifImage.backgroundColor = KNC_RGBColor(230, 230, 230);
 //        _gifImage.animatedImage = image;
         _gifImage.contentMode = UIViewContentModeScaleAspectFill;
         _gifImage.layer.masksToBounds = YES;
-        _gifImage.frame = CGRectMake(SCREEN_Width*0.1, Nav_topH+SCREEN_Width*0.1, SCREEN_Width*0.8, SCREEN_Width*0.8);
+        _gifImage.frame = CGRectMake(KNC_SCREEN_W*0.1, KNC_Nav_topH+KNC_SCREEN_W*0.1, KNC_SCREEN_W*0.8, KNC_SCREEN_W*0.8);
     }
     return _gifImage;
 }
 
 - (UIButton *)selectButton{
     if (!_selectButton) {
-        _selectButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width*0.3, CGRectGetMaxY(_gifImage.frame)+SCREEN_Width*0.1, SCREEN_Width*0.4, SCREEN_Width*0.4/3.95)];
+        _selectButton = [[UIButton alloc]initWithFrame:CGRectMake(KNC_SCREEN_W*0.3, CGRectGetMaxY(_gifImage.frame)+KNC_SCREEN_W*0.1, KNC_SCREEN_W*0.4, KNC_SCREEN_W*0.4/3.95)];
         [_selectButton setBackgroundImage:GetImage(@"choose picture") forState:UIControlStateNormal];
         [_selectButton addTarget:self action:@selector(inputAlubm) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -182,7 +182,7 @@
 
 - (KNC_GIFSettingView *)setView{
     if (!_setView) {
-        _setView = [[KNC_GIFSettingView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_selectButton.frame), SCREEN_Width, SCREEN_Height - CGRectGetMaxY(_selectButton.frame) - BOTTOM_HEIGHT)];
+        _setView = [[KNC_GIFSettingView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_selectButton.frame), KNC_SCREEN_W, KNC_SCREEN_H - CGRectGetMaxY(_selectButton.frame) - BOTTOM_HEIGHT)];
         _setView.delegate = self;
         _setView.imageArr = self.imageArr;
     }

@@ -23,7 +23,7 @@
         //设置item的大小
         self.itemSize = CGSizeMake(ITEMW, ITENH);
         self.scrollDirection  = UICollectionViewScrollDirectionHorizontal;
-        self.sectionInset = UIEdgeInsetsMake(0, SCREEN_Width /2 - ITEMW/2, 0, SCREEN_Width /2 - ITEMW/2);
+        self.sectionInset = UIEdgeInsetsMake(0, KNC_SCREEN_W /2 - ITEMW/2, 0, KNC_SCREEN_W /2 - ITEMW/2);
         self.minimumLineSpacing = 25;
     }
     return self;

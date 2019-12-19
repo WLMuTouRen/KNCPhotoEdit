@@ -27,7 +27,7 @@
 - (void)knc_func_setResource
 {
     
-    self.backgroundColor = RGBColor(230, 230, 230);
+    self.backgroundColor = KNC_RGBColor(230, 230, 230);
     _oneView = [[KNC_MeituImageEditView alloc] initWithFrame:CGRectZero];
     _twoView = [[KNC_MeituImageEditView alloc] initWithFrame:CGRectZero];
     _threeView = [[KNC_MeituImageEditView alloc] initWithFrame:CGRectZero];

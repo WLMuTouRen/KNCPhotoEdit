@@ -91,7 +91,7 @@
 - (void)saveWatermarkImage{
     weakSelf(self);
     UIImage *watermarkImage = [UIImage imageNamed:@"watermark_image"];
-    UIImage *tempImage = [KNC_ImageTool GetWaterPrintedImageWithBackImage:self.image andWaterImage:watermarkImage inRect:CGRectMake(SCREEN_Width-136, 15, 121, 35) alpha:1 waterScale:YES];
+    UIImage *tempImage = [KNC_ImageTool GetWaterPrintedImageWithBackImage:self.image andWaterImage:watermarkImage inRect:CGRectMake(KNC_SCREEN_W-136, 15, 121, 35) alpha:1 waterScale:YES];
     
     [weakSelf saveWithImage:tempImage];
     
@@ -121,7 +121,7 @@
     if (!_saveBtn) {
         _saveBtn = [[UIButton alloc]init];
         [_saveBtn setTitle:@"保存" forState:UIControlStateNormal];
-        [_saveBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_saveBtn addTarget:self action:@selector(saveBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _saveBtn;

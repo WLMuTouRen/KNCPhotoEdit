@@ -40,19 +40,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+   [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+    
 }
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+     self.navigationController.navigationBar.hidden = NO;
 }
-
 
 -(void)qc_pri_configUI{
     
-    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_Height)];
+    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_H)];
     backImage.contentMode = UIViewContentModeScaleAspectFill;
     backImage.layer.masksToBounds = YES;
     backImage.image = [UIImage imageNamed:@"buyBack"];
@@ -62,7 +61,7 @@
     
     [self.view addSubview:self.closeBtn];
        [self.closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-           make.top.equalTo(self.view).offset(Status_H + 5);
+           make.top.equalTo(self.view).offset(KNC_Status_H + 5);
            make.left.equalTo(self.view).offset(10);
            make.width.mas_equalTo(20);
            make.height.mas_equalTo(20);
@@ -70,19 +69,19 @@
     
 //    [self.view addSubview:self.titleLB];
 //    [self.titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.view).offset(Status_H + 10);
-//        make.left.equalTo(self.view).offset(SCREEN_Width/4);
-//        make.width.mas_equalTo(SCREEN_Width/2);
+//        make.top.equalTo(self.view).offset(KNC_Status_H + 10);
+//        make.left.equalTo(self.view).offset(KNC_SCREEN_W/4);
+//        make.width.mas_equalTo(KNC_SCREEN_W/2);
 //        make.height.mas_equalTo(20);
 //    }];
     
     [self.view addSubview:self.mainScrollView];
    
-    [self.mainScrollView addSubview:self.buyTipsLB];//50, 20, SCREEN_Width -100, 60
+    [self.mainScrollView addSubview:self.buyTipsLB];//50, 20, KNC_SCREEN_W -100, 60
     [self.buyTipsLB mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mainScrollView).offset(20);
         make.left.equalTo(self.mainScrollView).offset(20);
-        make.width.mas_equalTo(SCREEN_Width -30);
+        make.width.mas_equalTo(KNC_SCREEN_W -30);
         make.height.mas_equalTo(60);
     }];
     
@@ -90,21 +89,21 @@
     [self.buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
            make.left.equalTo(self.mainScrollView).offset(20);
-           make.width.mas_equalTo(SCREEN_Width/2 - 40);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.yearBtn];
     [self.yearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
-           make.left.mas_equalTo(SCREEN_Width/2 + 20);
-           make.width.mas_equalTo(SCREEN_Width/2 - 40);
+           make.left.mas_equalTo(KNC_SCREEN_W/2 + 20);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.restoreBtn];
     [self.restoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.yearBtn.mas_bottom).offset(20);
            make.left.equalTo(self.mainScrollView).offset(20);
-           make.width.mas_equalTo(SCREEN_Width - 40);
+           make.width.mas_equalTo(KNC_SCREEN_W - 40);
            make.height.mas_equalTo(40);
        }];
     
@@ -112,24 +111,24 @@
     [self.rebackLB mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.restoreBtn.mas_bottom).offset(0);
         make.left.equalTo(self.mainScrollView).offset(20);
-        make.width.mas_equalTo(SCREEN_Width - 40);
+        make.width.mas_equalTo(KNC_SCREEN_W - 40);
     }];
     [self.mainScrollView addSubview:self.protolBtn];
     [self.protolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.rebackLB.mas_bottom).offset(20);
-           make.left.equalTo(self.mainScrollView).offset(SCREEN_Width/4 - 20);
-           make.width.mas_equalTo(SCREEN_Width/4);
+           make.left.equalTo(self.mainScrollView).offset(KNC_SCREEN_W/4 - 20);
+           make.width.mas_equalTo(KNC_SCREEN_W/4);
            make.height.mas_equalTo(30);
        }];
     [self.mainScrollView addSubview:self.termUesBtn];
     [self.termUesBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.rebackLB.mas_bottom).offset(20);
            make.left.equalTo(self.protolBtn.mas_right).offset(20);
-           make.width.mas_equalTo(SCREEN_Width/3);
+           make.width.mas_equalTo(KNC_SCREEN_W/3);
            make.height.mas_equalTo(30);
        }];
     
-    self.mainScrollView.contentSize = CGSizeMake(0, SCREEN_Height*0.9);
+    self.mainScrollView.contentSize = CGSizeMake(0, KNC_SCREEN_H*0.9);
 }
 
 
@@ -139,10 +138,10 @@
 }
 
 -(void)mouthBuyBtnClick{
-    [[KNC_PayMannage sharePayHelp] applePayWithProductId:INVIPMONTH];
+    [[KNC_PayMannage sharePayHelp] applePayWithProductId:KNC_VIPMONTH];
 }
 -(void)yearBuyBtnClick{
-    [[KNC_PayMannage sharePayHelp] applePayWithProductId:INVIPYEAR];
+    [[KNC_PayMannage sharePayHelp] applePayWithProductId:KNC_VIPYEAR];
 }
 
 -(void)restoreBtnClick{
@@ -150,10 +149,10 @@
 }
 
 -(void)protolBtnClick{
-    [self qc_pri_pushVcWithWebUrl:PROTOCOLURL titleString:@"隐私政策"];
+    [self qc_pri_pushVcWithWebUrl:KNC_POLICYURL titleString:@"隐私政策"];
 }
 -(void)termUesBtnClick{
-    [self qc_pri_pushVcWithWebUrl:AUTOFUFEI titleString:@"自动续费协议"];
+    [self qc_pri_pushVcWithWebUrl:KNC_RENEWURL titleString:@"自动续费协议"];
 }
 
 -(void)qc_pri_pushVcWithWebUrl:(NSString *)urlString titleString:(NSString *)titleString{
@@ -167,12 +166,12 @@
 
 -(UIImageView*)topImagV{
     if (!_topImagV) {
-        _topImagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_Width*0.5)];
+        _topImagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_W*0.5)];
         _topImagV.image = [UIImage imageNamed:@"bg1"];
         
         UILabel *labe = [[UILabel alloc]init];
         labe.text = @" 解锁所有功能";
-        labe.frame = CGRectMake(0, SCREEN_Width*0.5 - 40, SCREEN_Width, 30);
+        labe.frame = CGRectMake(0, KNC_SCREEN_W*0.5 - 40, KNC_SCREEN_W, 30);
         labe.textColor = UIColor.whiteColor;
         labe.font = [UIFont boldSystemFontOfSize:22];
         labe.textAlignment = NSTextAlignmentLeft;
@@ -186,7 +185,7 @@
         _mainScrollView = [[UIScrollView alloc]init];
         _mainScrollView.backgroundColor = UIColor.clearColor;
         [_mainScrollView setScrollEnabled:YES];
-        _mainScrollView.frame = CGRectMake(0, CGRectGetMaxY(_topImagV.frame), SCREEN_Width, SCREEN_Height-CGRectGetMaxY(_topImagV.frame));
+        _mainScrollView.frame = CGRectMake(0, CGRectGetMaxY(_topImagV.frame), KNC_SCREEN_W, KNC_SCREEN_H-CGRectGetMaxY(_topImagV.frame));
         _mainScrollView.showsVerticalScrollIndicator = NO;
     }
     return _mainScrollView;
@@ -214,7 +213,7 @@
 -(UIButton *)protolBtn{
     if (!_protolBtn) {
         _protolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_protolBtn setTitleColor:RGBColor(255, 255, 255) forState:UIControlStateNormal];
+        [_protolBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
         _protolBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_protolBtn setTitle:@"隐私协议" forState:UIControlStateNormal];
         [_protolBtn addTarget:self action:@selector(protolBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -229,7 +228,7 @@
 -(UIButton *)termUesBtn{
     if (!_termUesBtn) {
         _termUesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_termUesBtn setTitleColor:RGBColor(255, 255, 255) forState:UIControlStateNormal];
+        [_termUesBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
         _termUesBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_termUesBtn setTitle:@"自动续费协议" forState:UIControlStateNormal];
         [_termUesBtn addTarget:self action:@selector(termUesBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -242,7 +241,7 @@
 -(UIButton *)restoreBtn{
     if (!_restoreBtn) {
         _restoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_restoreBtn setTitleColor:RGBColor(255, 255, 255) forState:UIControlStateNormal];
+        [_restoreBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
         _restoreBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_restoreBtn setTitle:@"恢复购买项目" forState:UIControlStateNormal];
         [_restoreBtn addTarget:self action:@selector(restoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -267,7 +266,7 @@
 //    if (!_titleLB) {
 //        _titleLB = [[UILabel alloc]init];
 //        _titleLB.text = @"购买高级服务";
-//        _titleLB.frame = CGRectMake(0, 20, SCREEN_Width, 20);
+//        _titleLB.frame = CGRectMake(0, 20, KNC_SCREEN_W, 20);
 //        _titleLB.textColor = UIColor.blackColor;
 //        _titleLB.font = [UIFont systemFontOfSize:17];
 //        _titleLB.textAlignment = NSTextAlignmentCenter;
@@ -279,7 +278,7 @@
         _buyTipsLB = [[UILabel alloc]init];
         _buyTipsLB.text = @"1、解锁GIF动图，趣味拼图功能\n2、去除水印，畅享体验全部功能";
         _buyTipsLB.numberOfLines = 0;
-        _buyTipsLB.textColor = RGBColor(255, 255, 255);
+        _buyTipsLB.textColor = KNC_RGBColor(255, 255, 255);
         _buyTipsLB.font = [UIFont systemFontOfSize:16];
     }
     return _buyTipsLB;
@@ -289,7 +288,7 @@
 -(TTTAttributedLabel *)rebackLB{
     if (!_rebackLB) {
         _rebackLB = [[TTTAttributedLabel alloc]initWithFrame:CGRectZero];
-        _rebackLB.textColor = RGBColor(3, 3, 3);
+        _rebackLB.textColor = KNC_RGBColor(3, 3, 3);
         _rebackLB.numberOfLines = 0;
         _rebackLB.font = [UIFont systemFontOfSize:12];
         _rebackLB.textAlignment = NSTextAlignmentLeft;

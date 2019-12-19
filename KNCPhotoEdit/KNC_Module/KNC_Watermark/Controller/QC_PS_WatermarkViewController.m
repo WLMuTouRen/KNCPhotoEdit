@@ -44,7 +44,7 @@
     }];
     [self.view addSubview:self.watermarkBtn];
     [self.watermarkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view).offset(-TabMustAdd);
+        make.bottom.equalTo(self.view).offset(-KNC_TabMustAdd);
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(50);
     }];
@@ -64,7 +64,7 @@
 
     CGFloat height = self.image.size.height;
     CGFloat width = self.image.size.width;
-    self.scrollView.frame = CGRectMake(0, 0, SCREEN_Width, SCREEN_Height - TabMustAdd - 50);
+    self.scrollView.frame = CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_H - KNC_TabMustAdd - 50);
     self.scrollView.contentSize = CGSizeMake(width, height);
     self.imageView.frame = CGRectMake(0, 0, width, height);
 }
@@ -72,7 +72,7 @@
 - (void)addWatermarkBtnAction{
     
 //    self.watermarkImage = [UIImage imageNamed:@"watermark_image"];
-//    self.imageView.image = [QC_PS_ImageTool GetWaterPrintedImageWithBackImage:self.image andWaterImage:self.watermarkImage inRect:CGRectMake(SCREEN_Width-136, 15, 121, 30) alpha:1 waterScale:YES];
+//    self.imageView.image = [QC_PS_ImageTool GetWaterPrintedImageWithBackImage:self.image andWaterImage:self.watermarkImage inRect:CGRectMake(KNC_SCREEN_W-136, 15, 121, 30) alpha:1 waterScale:YES];
     
     [self knc_func_openPhoto];
 }
@@ -86,7 +86,7 @@
     }
     
     KNC_FinishImageViewController *imageViewController = [[KNC_FinishImageViewController alloc]init];
-    UIImage *oooImage = [KNC_ImageTool ps_imageCompressForWidth:self.imageView.image targetWidth:SCREEN_Width];
+    UIImage *oooImage = [KNC_ImageTool ps_imageCompressForWidth:self.imageView.image targetWidth:KNC_SCREEN_W];
     imageViewController.image = oooImage;
     [self.navigationController pushViewController:imageViewController animated:YES];
     
@@ -119,7 +119,7 @@
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc]init];
         _bottomLineView.layer.borderWidth = 1;
-        _bottomLineView.layer.borderColor = PSColorSeparator.CGColor;
+        _bottomLineView.layer.borderColor = KNC_HexColor(0xeeeeee).CGColor;
     }
     return _bottomLineView;
 }
@@ -128,7 +128,7 @@
     if (!_watermarkBtn) {
         _watermarkBtn = [[UIButton alloc]init];
         [_watermarkBtn setTitle:@"选择水印" forState:UIControlStateNormal];
-        [_watermarkBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_watermarkBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_watermarkBtn addTarget:self action:@selector(addWatermarkBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _watermarkBtn;
@@ -138,7 +138,7 @@
     if (!_saveBtn) {
         _saveBtn = [[UIButton alloc]init];
         [_saveBtn setTitle:@"完成" forState:UIControlStateNormal];
-        [_saveBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_saveBtn addTarget:self action:@selector(saveBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _saveBtn;

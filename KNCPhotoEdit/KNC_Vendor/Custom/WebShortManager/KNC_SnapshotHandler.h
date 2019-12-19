@@ -23,6 +23,6 @@
 
 @property (nonatomic, weak) id<PPSnapshotHandlerDelegate> delegate;
 
-- (void)snapshotForView:(__kindof UIView *)view;
+- (void)knc_snapshotForView:(__kindof UIView *)view;
 
 @end

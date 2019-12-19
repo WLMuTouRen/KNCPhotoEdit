@@ -42,10 +42,10 @@
     [self.view addSubview:self.imageView];
     self.imageView.image = self.image;
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(Status_H);
-        make.left.equalTo(self.view).offset(SCREEN_Width/4);
-        make.width.mas_equalTo(SCREEN_Width/2);
-        make.height.mas_equalTo(SCREEN_Height - Status_H);
+        make.top.equalTo(self.view).offset(KNC_Status_H);
+        make.left.equalTo(self.view).offset(KNC_SCREEN_W/4);
+        make.width.mas_equalTo(KNC_SCREEN_W/2);
+        make.height.mas_equalTo(KNC_SCREEN_H - KNC_Status_H);
     }];
     [self.view addSubview:self.saveBtn];
     [self.saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {

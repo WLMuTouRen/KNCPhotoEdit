@@ -37,7 +37,7 @@
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:self.saveBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
-    [self createMosaicsView:self.originalImage withFrame:CGRectMake(0, Nav_topH, SCREEN_Width, SCREEN_Height - TabMustAdd  - 50 - Nav_topH)];
+    [self createMosaicsView:self.originalImage withFrame:CGRectMake(0, KNC_Nav_topH, KNC_SCREEN_W, KNC_SCREEN_H - KNC_TabMustAdd  - 50 - KNC_Nav_topH)];
     [self.view addSubview:self.bottomLineView];
     [self.view addSubview:self.lastStepBtn];
     [self.view addSubview:self.nextStepBtn];
@@ -152,7 +152,7 @@
     CGFloat H = self.mainScrollView.frame.size.height;
     
     CGRect rct = self.mosaicView.frame;
-    rct.origin.x = MAX((Ws-W)/2, (SCREEN_Width - self.mosaicView.width)/2);
+    rct.origin.x = MAX((Ws-W)/2, (KNC_SCREEN_W - self.mosaicView.width)/2);
     rct.origin.y = MAX((Hs-H)/2, (self.mainScrollView.height - self.mosaicView.height)/2);
     self.mosaicView.frame = rct;
 }
@@ -163,7 +163,7 @@
         _lastStepBtn = [[UIButton alloc]init];
 //        [_lastStepBtn setTitle:@"<-" forState:UIControlStateNormal];
         [_lastStepBtn setBackgroundImage:[UIImage imageNamed:@"mosaic_last_icon"] forState:UIControlStateNormal];
-//        [_lastStepBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+//        [_lastStepBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_lastStepBtn addTarget:self action:@selector(lastStepBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _lastStepBtn;
@@ -174,7 +174,7 @@
         _nextStepBtn = [[UIButton alloc]init];
 //        [_nextStepBtn setTitle:@"->" forState:UIControlStateNormal];
         [_nextStepBtn setBackgroundImage:[UIImage imageNamed:@"mosaic_next_icon"] forState:UIControlStateNormal];
-//        [_nextStepBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+//        [_nextStepBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_nextStepBtn addTarget:self action:@selector(nextStepBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _nextStepBtn;
@@ -184,7 +184,7 @@
     if (!_clearBtn) {
         _clearBtn = [[UIButton alloc]init];
         [_clearBtn setTitle:@"重置" forState:UIControlStateNormal];
-        [_clearBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_clearBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_clearBtn addTarget:self action:@selector(clearBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _clearBtn;
@@ -194,7 +194,7 @@
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc]init];
         _bottomLineView.layer.borderWidth = 1;
-        _bottomLineView.layer.borderColor = PSColorSeparator.CGColor;
+        _bottomLineView.layer.borderColor = KNC_HexColor(0xeeeeee).CGColor;
     }
     return _bottomLineView;
 }
@@ -203,7 +203,7 @@
     if (!_saveBtn) {
         _saveBtn = [[UIButton alloc]init];
         [_saveBtn setTitle:@"完成" forState:UIControlStateNormal];
-        [_saveBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_saveBtn addTarget:self action:@selector(saveBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _saveBtn;

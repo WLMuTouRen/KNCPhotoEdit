@@ -19,8 +19,7 @@
 
 @implementation KNC_SnapshotHandler
 
-+ (instancetype)defaultHandler
-{
++ (instancetype)defaultHandler{
     static dispatch_once_t onceToken;
     static KNC_SnapshotHandler *defaultHandler = nil;
     dispatch_once(&onceToken, ^{
@@ -31,25 +30,22 @@
 
 #pragma mark - public method
 
-- (void)snapshotForView:(__kindof UIView *)view
-{
+- (void)knc_snapshotForView:(__kindof UIView *)view{
     if (!view || _isCapturing) {
         return;
     }
 
     _captureView = view;
-
     if ([view isKindOfClass:[UIScrollView class]]) {
-        [self snapshotForScrollView:(UIScrollView *)view];
+        [self knc_snapshotForScrollView:(UIScrollView *)view];
     }  else if ([view isKindOfClass:[WKWebView class]]) {
-        [self snapshotForWKWebView:(WKWebView *)view];
+        [self knc_snapshotForWKWebView:(WKWebView *)view];
     }
 }
 
 #pragma mark - WKWebView
 
-- (void)snapshotForWKWebView:(WKWebView *)webView
-{
+- (void)knc_snapshotForWKWebView:(WKWebView *)webView{
     UIView *snapshotView = [webView snapshotViewAfterScreenUpdates:YES];
     snapshotView.frame = webView.frame;
     [webView.superview addSubview:snapshotView];
@@ -89,8 +85,7 @@
     }];
 }
 
-- (void)drawContentPage:(UIView *)targetView webView:(WKWebView *)webView index:(NSInteger)index maxIndex:(NSInteger)maxIndex completion:(dispatch_block_t)completion
-{
+- (void)drawContentPage:(UIView *)targetView webView:(WKWebView *)webView index:(NSInteger)index maxIndex:(NSInteger)maxIndex completion:(dispatch_block_t)completion{
     CGRect splitFrame = CGRectMake(0, index * CGRectGetHeight(targetView.bounds), targetView.bounds.size.width, targetView.frame.size.height);
     CGRect myFrame = webView.frame;
     myFrame.origin.y = -(index * targetView.frame.size.height);
@@ -109,8 +104,7 @@
 
 #pragma mark - UIScrollView
 
-- (void)snapshotForScrollView:(UIScrollView *)scrollView
-{
+- (void)knc_snapshotForScrollView:(UIScrollView *)scrollView{
 
     CGPoint currentOffset = scrollView.contentOffset;
     CGRect currentFrame = scrollView.frame;

@@ -30,7 +30,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     if (self) {
          // 把拿到的图片根据设备宽缩放
         for (UIImage *temp in array) {
-            UIImage *tempImage = [KNC_ImageTool ps_imageCompressForWidth:temp targetWidth:SCREEN_Width];
+            UIImage *tempImage = [KNC_ImageTool ps_imageCompressForWidth:temp targetWidth:KNC_SCREEN_W];
             [self.imageArray addObject:tempImage];
         }
 
@@ -58,7 +58,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     
     [self.compTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-TabMustAdd - 50);
+        make.bottom.equalTo(self.view).offset(-KNC_TabMustAdd - 50);
     }];
     [self.bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.compTableView.mas_bottom);
@@ -107,16 +107,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
 
 // 保存
 - (void)saveBtnAction{
-    if (isVip) {
-        [self qc_pri_pushVc];
-    }else{
-
-        KNC_BuyViewController *buyVc =   [[KNC_BuyViewController alloc]init];
-        [self.navigationController pushViewController:buyVc animated:YES];
-
-    }
-  
-    
+    [self qc_pri_pushVc];
 }
 -(void)qc_pri_pushVc{
     KNC_FinishImageViewController *imageViewController = [[KNC_FinishImageViewController alloc]init];
@@ -162,7 +153,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     if (!_mosaicBtn) {
         _mosaicBtn = [[UIButton alloc]init];
         [_mosaicBtn setTitle:@"马赛克处理" forState:UIControlStateNormal];
-        [_mosaicBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_mosaicBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_mosaicBtn addTarget:self action:@selector(mosaicBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _mosaicBtn;
@@ -172,7 +163,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     if (!_watermarkBtn) {
         _watermarkBtn = [[UIButton alloc]init];
         [_watermarkBtn setTitle:@"水印" forState:UIControlStateNormal];
-        [_watermarkBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_watermarkBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_watermarkBtn addTarget:self action:@selector(watermarkBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _watermarkBtn;
@@ -182,7 +173,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc]init];
         _bottomLineView.layer.borderWidth = 1;
-        _bottomLineView.layer.borderColor = PSColorSeparator.CGColor;
+        _bottomLineView.layer.borderColor = KNC_HexColor(0xeeeeee).CGColor;
     }
     return _bottomLineView;
 }
@@ -191,7 +182,7 @@ static NSString * const CompoundTableViewCellID = @"CompoundTableViewCell";
     if (!_saveBtn) {
         _saveBtn = [[UIButton alloc]init];
         [_saveBtn setTitle:@"直接拼接" forState:UIControlStateNormal];
-        [_saveBtn setTitleColor:PSColorTheme forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:KNCMianColor forState:UIControlStateNormal];
         [_saveBtn addTarget:self action:@selector(saveBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _saveBtn;

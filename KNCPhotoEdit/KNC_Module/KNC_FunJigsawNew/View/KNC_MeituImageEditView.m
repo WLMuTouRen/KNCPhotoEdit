@@ -37,7 +37,7 @@
     
     
     self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
-    _imageview.frame = CGRectMake(0, 0, SCREEN_Width * 2.5, SCREEN_Width * 2.5);
+    _imageview.frame = CGRectMake(0, 0, KNC_SCREEN_W * 2.5, KNC_SCREEN_W * 2.5);
     _imageview.userInteractionEnabled = YES;
     //    [_imageview setClipsToBounds:YES];
     //    _imageview.contentMode = UIViewContentModeScaleAspectFit;
@@ -63,7 +63,7 @@
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
     _contentScrView.frame = CGRectInset(self.bounds, 0, 0);
-    self.imageview.frame = CGRectMake(0, 0, SCREEN_Width * 2.5, SCREEN_Width * 2.5);
+    self.imageview.frame = CGRectMake(0, 0, KNC_SCREEN_W * 2.5, KNC_SCREEN_W * 2.5);
     float minimumScale = self.frame.size.width / _imageview.frame.size.width;
     [_contentScrView setMinimumZoomScale:minimumScale];
     [_contentScrView setZoomScale:minimumScale];
@@ -76,7 +76,7 @@
 - (void)setBounds:(CGRect)bounds{
     [super setBounds:bounds];
     _contentScrView.frame = self.bounds;
-    self.imageview.frame = CGRectMake(0, 0, SCREEN_Width * 2.5, SCREEN_Width * 2.5);
+    self.imageview.frame = CGRectMake(0, 0, KNC_SCREEN_W * 2.5, KNC_SCREEN_W * 2.5);
     float minimumScale = self.frame.size.width / _imageview.frame.size.width;
     [_contentScrView setMinimumZoomScale:minimumScale];
     [_contentScrView setZoomScale:minimumScale];
