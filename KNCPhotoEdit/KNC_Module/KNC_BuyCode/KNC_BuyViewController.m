@@ -157,7 +157,7 @@
 
 -(void)qc_pri_pushVcWithWebUrl:(NSString *)urlString titleString:(NSString *)titleString{
     KNC_WebViewController *webVc = [[KNC_WebViewController alloc]init];
-    webVc.titleStr =titleString;
+    webVc.titleStr = titleString;
     webVc.url_Str = urlString;
     webVc.ishiddenBottom = YES;
     [self.navigationController pushViewController:webVc animated:YES];

@@ -81,8 +81,8 @@
 //按年购买
 #define KNC_VIPYEAR @"KNCPhotoEditVipYear"
 
-#define KNC_POLICYURL @"https://www.jianshu.com/p/41d2bec2760a"
-#define KNC_RENEWURL @"https://www.jianshu.com/p/d6624a215e28"
+#define KNC_POLICYURL @"http://ttpyxprivacy.mystrikingly.com"
+#define KNC_RENEWURL @"http://ttptxagreement.mystrikingly.com"
 
 
 

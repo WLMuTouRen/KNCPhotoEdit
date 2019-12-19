@@ -17,14 +17,17 @@
 
 @implementation KNC_ClipViewController
 
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBar.hidden = YES;
+   
+
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+     self.navigationController.navigationBar.hidden = NO;
 }
 
 
