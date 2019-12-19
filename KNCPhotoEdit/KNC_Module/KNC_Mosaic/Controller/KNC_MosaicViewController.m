@@ -128,7 +128,7 @@
     self.mosaicView.centerX = self.mainScrollView.width * 0.5;
     self.mosaicView.deleagate = self;
     self.mosaicView.originalImage = image;//原图
-    self.mosaicView.mosaicImage = [UIImage imageNamed:@"btn_meitu_edit_normal"];//马赛克图
+    self.mosaicView.mosaicImage = [UIImage imageNamed:@"mosaic_style_7"];//马赛克图
     [self.mainScrollView addSubview:self.mosaicView];
     
     self.mainScrollView.maximumZoomScale = 2.0;
