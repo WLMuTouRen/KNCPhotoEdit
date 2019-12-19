@@ -62,9 +62,9 @@
     [self.view addSubview:self.startBtn];
     [self.startBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(190 + KNC_Nav_topH);
-        make.left.equalTo(self.view).offset(30);
-        make.right.equalTo(self.view).offset(-30);
-        make.height.mas_equalTo(44);
+        make.left.equalTo(self.view).offset(65);
+        make.right.equalTo(self.view).offset(-65);
+        make.height.mas_equalTo(50);
     }];
     
 }
@@ -135,12 +135,12 @@
     if (!_startBtn) {
         _startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_startBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-        _startBtn.backgroundColor = KNC_RGBColor(131, 102, 255);
+        [_startBtn setBackgroundImage:GetImage(@"choosePicture") forState:UIControlStateNormal];
         _startBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_startBtn setTitle:@"开始截图" forState:UIControlStateNormal];
         [_startBtn addTarget:self action:@selector(startBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _startBtn.layer.masksToBounds = YES;
-        _startBtn.layer.cornerRadius = 22;
+//        _startBtn.layer.masksToBounds = YES;
+//        _startBtn.layer.cornerRadius = 22;
     }
     return _startBtn;
 }

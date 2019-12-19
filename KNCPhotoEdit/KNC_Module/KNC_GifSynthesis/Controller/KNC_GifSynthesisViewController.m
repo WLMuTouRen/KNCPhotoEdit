@@ -174,7 +174,8 @@
 - (UIButton *)selectButton{
     if (!_selectButton) {
         _selectButton = [[UIButton alloc]initWithFrame:CGRectMake(KNC_SCREEN_W*0.3, CGRectGetMaxY(_gifImage.frame)+KNC_SCREEN_W*0.1, KNC_SCREEN_W*0.4, KNC_SCREEN_W*0.4/3.95)];
-        [_selectButton setBackgroundImage:GetImage(@"choose picture") forState:UIControlStateNormal];
+        [_selectButton setBackgroundImage:GetImage(@"choosePicture") forState:UIControlStateNormal];
+        [_selectButton setTitle:@"选择图片" forState:UIControlStateNormal];
         [_selectButton addTarget:self action:@selector(inputAlubm) forControlEvents:UIControlEventTouchUpInside];
     }
     return _selectButton;

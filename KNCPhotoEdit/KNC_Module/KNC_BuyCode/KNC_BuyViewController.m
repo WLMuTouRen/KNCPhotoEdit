@@ -82,21 +82,21 @@
         make.top.equalTo(self.mainScrollView).offset(20);
         make.left.equalTo(self.mainScrollView).offset(20);
         make.width.mas_equalTo(KNC_SCREEN_W -30);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(90);
     }];
     
      [self.mainScrollView addSubview:self.buyBtn];
     [self.buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
-           make.left.equalTo(self.mainScrollView).offset(20);
-           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
+           make.left.equalTo(self.mainScrollView).offset(10);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 20);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.yearBtn];
     [self.yearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.buyTipsLB.mas_bottom).offset(20);
-           make.left.mas_equalTo(KNC_SCREEN_W/2 + 20);
-           make.width.mas_equalTo(KNC_SCREEN_W/2 - 40);
+           make.left.mas_equalTo(KNC_SCREEN_W/2 + 10);
+           make.width.mas_equalTo(KNC_SCREEN_W/2 - 20);
            make.height.mas_equalTo(120);
        }];
     [self.mainScrollView addSubview:self.restoreBtn];
@@ -116,8 +116,8 @@
     [self.mainScrollView addSubview:self.protolBtn];
     [self.protolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.rebackLB.mas_bottom).offset(20);
-           make.left.equalTo(self.mainScrollView).offset(KNC_SCREEN_W/4 - 20);
-           make.width.mas_equalTo(KNC_SCREEN_W/4);
+           make.left.equalTo(self.mainScrollView).offset(KNC_SCREEN_W/5 - 20);
+           make.width.mas_equalTo(KNC_SCREEN_W/3);
            make.height.mas_equalTo(30);
        }];
     [self.mainScrollView addSubview:self.termUesBtn];
@@ -169,13 +169,13 @@
         _topImagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KNC_SCREEN_W, KNC_SCREEN_W*0.5)];
         _topImagV.image = [UIImage imageNamed:@"bg1"];
         
-        UILabel *labe = [[UILabel alloc]init];
-        labe.text = @" 解锁所有功能";
-        labe.frame = CGRectMake(0, KNC_SCREEN_W*0.5 - 40, KNC_SCREEN_W, 30);
-        labe.textColor = UIColor.whiteColor;
-        labe.font = [UIFont boldSystemFontOfSize:22];
-        labe.textAlignment = NSTextAlignmentLeft;
-        [_topImagV addSubview:labe];
+//        UILabel *labe = [[UILabel alloc]init];
+//        labe.text = @" 解锁所有功能";
+//        labe.frame = CGRectMake(0, KNC_SCREEN_W*0.5 - 40, KNC_SCREEN_W, 30);
+//        labe.textColor = UIColor.whiteColor;
+//        labe.font = [UIFont boldSystemFontOfSize:22];
+//        labe.textAlignment = NSTextAlignmentLeft;
+//        [_topImagV addSubview:labe];
     }
     return _topImagV;
 }
@@ -194,7 +194,7 @@
 -(UIButton *)buyBtn{
     if (!_buyBtn) {
         _buyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_buyBtn setBackgroundImage:GetImage(@"mouthBuy") forState:UIControlStateNormal];
+        [_buyBtn setBackgroundImage:GetImage(@"yue_vip") forState:UIControlStateNormal];
         [_buyBtn addTarget:self action:@selector(mouthBuyBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buyBtn;
@@ -203,7 +203,7 @@
 -(UIButton *)yearBtn{
     if (!_yearBtn) {
         _yearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_yearBtn setBackgroundImage:GetImage(@"yearBuy") forState:UIControlStateNormal];
+        [_yearBtn setBackgroundImage:GetImage(@"nian_vip") forState:UIControlStateNormal];
         [_yearBtn addTarget:self action:@selector(yearBuyBtnClick)
            forControlEvents:UIControlEventTouchUpInside];
     }
@@ -213,13 +213,14 @@
 -(UIButton *)protolBtn{
     if (!_protolBtn) {
         _protolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_protolBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
-        _protolBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-        [_protolBtn setTitle:@"隐私协议" forState:UIControlStateNormal];
+        [_protolBtn setImage:[UIImage imageNamed:@"yinsi"] forState:UIControlStateNormal];
+//        [_protolBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+//        _protolBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+//        [_protolBtn setTitle:@"隐私协议" forState:UIControlStateNormal];
         [_protolBtn addTarget:self action:@selector(protolBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _protolBtn.layer.cornerRadius = 5;
-        _protolBtn.layer.masksToBounds = YES;
-        [_protolBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
+//        _protolBtn.layer.cornerRadius = 5;
+//        _protolBtn.layer.masksToBounds = YES;
+//        [_protolBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
     }
     return _protolBtn;
 }
@@ -228,20 +229,21 @@
 -(UIButton *)termUesBtn{
     if (!_termUesBtn) {
         _termUesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_termUesBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
-        _termUesBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-        [_termUesBtn setTitle:@"自动续费协议" forState:UIControlStateNormal];
+        [_termUesBtn setImage:[UIImage imageNamed:@"zidongxufei"] forState:UIControlStateNormal];
+//        [_termUesBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+//        _termUesBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+//        [_termUesBtn setTitle:@"自动续费协议" forState:UIControlStateNormal];
         [_termUesBtn addTarget:self action:@selector(termUesBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _termUesBtn.layer.cornerRadius = 5;
-        _termUesBtn.layer.masksToBounds = YES;
-        [_termUesBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
+//        _termUesBtn.layer.cornerRadius = 5;
+//        _termUesBtn.layer.masksToBounds = YES;
+//        [_termUesBtn setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.5]];
     }
     return _termUesBtn;
 }
 -(UIButton *)restoreBtn{
     if (!_restoreBtn) {
         _restoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_restoreBtn setTitleColor:KNC_RGBColor(255, 255, 255) forState:UIControlStateNormal];
+        [_restoreBtn setTitleColor:KNC_RGBColor(3, 3, 3) forState:UIControlStateNormal];
         _restoreBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [_restoreBtn setTitle:@"恢复购买项目" forState:UIControlStateNormal];
         [_restoreBtn addTarget:self action:@selector(restoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -276,10 +278,10 @@
 -(UILabel *)buyTipsLB{
     if (!_buyTipsLB) {
         _buyTipsLB = [[UILabel alloc]init];
-        _buyTipsLB.text = @"1、解锁GIF动图，趣味拼图功能\n2、去除水印，畅享体验全部功能";
+        _buyTipsLB.text = @"VIP专属功能\n\n1、解锁GIF动图，趣味拼图功能\n\n2、去除水印，畅享体验全部功能";
         _buyTipsLB.numberOfLines = 0;
-        _buyTipsLB.textColor = KNC_RGBColor(255, 255, 255);
-        _buyTipsLB.font = [UIFont systemFontOfSize:16];
+        _buyTipsLB.textColor = KNC_RGBColor(3, 3, 3);
+        _buyTipsLB.font = [UIFont systemFontOfSize:15];
     }
     return _buyTipsLB;
 }
