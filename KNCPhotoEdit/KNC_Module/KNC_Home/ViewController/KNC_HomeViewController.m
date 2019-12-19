@@ -102,6 +102,7 @@
     if(!cell){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
     }
+    cell.selectionStyle = UITableViewCellStyleDefault;
     if(indexPath.section == 0){
         UIButton *long_Btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 5, (KNC_SCREEN_W - 80) / 2 , 120)];
         [long_Btn setImage:[UIImage imageNamed:@"long_image"] forState:UIControlStateNormal];
