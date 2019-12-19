@@ -1,0 +1,40 @@
+PODS:
+  - JCore (2.1.4)
+  - JPush (3.2.6):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
+  - TZImagePickerController (3.2.7)
+  - UMCAnalytics (6.0.5):
+    - UMCCommon
+  - UMCCommon (2.1.1)
+
+DEPENDENCIES:
+  - JPush
+  - Masonry
+  - SVProgressHUD
+  - TZImagePickerController
+  - UMCAnalytics
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JCore
+    - JPush
+    - Masonry
+    - SVProgressHUD
+    - TZImagePickerController
+    - UMCAnalytics
+    - UMCCommon
+
+SPEC CHECKSUMS:
+  JCore: d345c049141877eb61c33011455fdb5fcab1673f
+  JPush: 41dd48a69bd8c08abc692dc7f2b23c0fb281471f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TZImagePickerController: 821b81f83594a736e831a018f2a2ce31822ddf0b
+  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
+  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+
+PODFILE CHECKSUM: ffb94bcacee459ea20abb3ec264a036b043373c9
+
+COCOAPODS: 1.6.1

@@ -1,0 +1,50 @@
+//
+//  PrefixHeader.pch
+//  PSLongFigure
+//
+//  Created by Mac on 2019/12/10.
+//  Copyright © 2019 GhostLord. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// ------------- 系统框架 ---------
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+#import <Photos/Photos.h>
+// ------------- 三方框架 ---------
+#import <Masonry/Masonry.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <TZImagePickerController/TZImagePickerController.h>
+#import <TZImagePickerController/TZPhotoPreviewController.h>
+#import "KNC_WaterFlowLayout.h"
+
+// ----------- 项目常量配置及常用公共类 ------
+#import "Constants.h"
+#import "LocalStoragePublicKey.h"
+#import "AppDelegate.h"
+#import "GIFMainPath.h"
+
+// ------------- 常用工具类 ------
+#import "KNC_WebShortController.h"
+#import "KNC_WebViewController.h"
+#import "KNC_ClipViewController.h"
+#import "KNC_BuyViewController.h"
+#import "KNC_PayMannage.h"
+// ------------- 工具类目 -------------
+#import "KNC_SnapshotHandler.h"
+#import "KNC_HelpManager.h"
+// -----------Categories ------
+#import "UIView+Frame.h"
+
+// ------------ 基类 -------
+#import "KNC_BaseViewController.h"
+#import "KNC_BaseView.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+
+#endif /* PrefixHeader_pch */
