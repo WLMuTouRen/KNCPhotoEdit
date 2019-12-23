@@ -483,8 +483,8 @@
 		044D04A723AB26AB00A2FC34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				044D04A823AB26AB00A2FC34 /* KNC_MosaicView.m */,
 				044D04A923AB26AB00A2FC34 /* KNC_MosaicView.h */,
+				044D04A823AB26AB00A2FC34 /* KNC_MosaicView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,14 +552,14 @@
 		044D04CB23AB26AB00A2FC34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				044D04CC23AB26AB00A2FC34 /* KNC_MeituImageEditView.h */,
-				044D04CD23AB26AB00A2FC34 /* KNC_StoryboardSelectView.h */,
-				044D04CE23AB26AB00A2FC34 /* KNC_MeituContentView.m */,
-				044D04CF23AB26AB00A2FC34 /* KNC_MeituSpliceContentView.m */,
-				044D04D023AB26AB00A2FC34 /* KNC_MeituImageEditView.m */,
-				044D04D123AB26AC00A2FC34 /* KNC_StoryboardSelectView.m */,
 				044D04D223AB26AC00A2FC34 /* KNC_MeituContentView.h */,
+				044D04CE23AB26AB00A2FC34 /* KNC_MeituContentView.m */,
+				044D04CC23AB26AB00A2FC34 /* KNC_MeituImageEditView.h */,
+				044D04D023AB26AB00A2FC34 /* KNC_MeituImageEditView.m */,
 				044D04D323AB26AC00A2FC34 /* KNC_MeituSpliceContentView.h */,
+				044D04CF23AB26AB00A2FC34 /* KNC_MeituSpliceContentView.m */,
+				044D04CD23AB26AB00A2FC34 /* KNC_StoryboardSelectView.h */,
+				044D04D123AB26AC00A2FC34 /* KNC_StoryboardSelectView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -596,8 +596,8 @@
 		044D04DD23AB26AC00A2FC34 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				044D04DE23AB26AC00A2FC34 /* QC_PS_WatermarkViewController.m */,
 				044D04DF23AB26AC00A2FC34 /* QC_PS_WatermarkViewController.h */,
+				044D04DE23AB26AC00A2FC34 /* QC_PS_WatermarkViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -683,8 +683,8 @@
 		044D050F23AB26AC00A2FC34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				044D051023AB26AC00A2FC34 /* KNC_GifSynthesisModel.m */,
 				044D051123AB26AC00A2FC34 /* KNC_GifSynthesisModel.h */,
+				044D051023AB26AC00A2FC34 /* KNC_GifSynthesisModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,8 +704,8 @@
 		044D051423AB26AC00A2FC34 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				044D051523AB26AC00A2FC34 /* KNC_GIFSettingCollectionViewCell.m */,
 				044D051623AB26AC00A2FC34 /* KNC_GIFSettingCollectionViewCell.h */,
+				044D051523AB26AC00A2FC34 /* KNC_GIFSettingCollectionViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -757,11 +757,11 @@
 			isa = PBXGroup;
 			children = (
 				044D052923AB26AC00A2FC34 /* KNC_HomeCardCollectionView.h */,
-				044D052A23AB26AC00A2FC34 /* KNC_HomeCardCollectionViewCell.h */,
-				044D052B23AB26AC00A2FC34 /* KNC_HomeCardCollectionVIewLayout.m */,
 				044D052C23AB26AC00A2FC34 /* KNC_HomeCardCollectionView.m */,
-				044D052D23AB26AC00A2FC34 /* KNC_HomeCardCollectionVIewLayout.h */,
+				044D052A23AB26AC00A2FC34 /* KNC_HomeCardCollectionViewCell.h */,
 				044D052E23AB26AC00A2FC34 /* KNC_HomeCardCollectionViewCell.m */,
+				044D052D23AB26AC00A2FC34 /* KNC_HomeCardCollectionVIewLayout.h */,
+				044D052B23AB26AC00A2FC34 /* KNC_HomeCardCollectionVIewLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1233,6 +1233,7 @@
 				CODE_SIGN_ENTITLEMENTS = "KNCPhotoEdit/天天拼图秀.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";
@@ -1263,6 +1264,7 @@
 				CODE_SIGN_ENTITLEMENTS = "KNCPhotoEdit/天天拼图秀.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9Z42S3DK93;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KNCPhotoEdit/Macro/PrefixHeader.pch";

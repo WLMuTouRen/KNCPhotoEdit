@@ -117,12 +117,10 @@
     }
     
     CGRect rect = CGRectMake(bounds.size.width - (19.0f + 5.0f), (bounds.size.height - 19.0) / 2.0, 19.0f, 19.0f);
-    
     return rect;
 }
 
 #pragma mark - 重写弹出菜单的方法 ---
-
 /**
  自定义弹出的菜单
  */

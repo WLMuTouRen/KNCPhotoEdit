@@ -17,19 +17,20 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>请允许使用相机以拍摄图片作为素材</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>请允许APP使用您的地理位置，以提供更精准的服务</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>请允许APP使用您的地理位置，以提供更精准的服务</string>
+	<string>请允许APP访问您的相机，以便于您拍摄图片进行编辑</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>请允许APP访问您的相册，以便给您带来更好的体验</string>
+	<string>请允许APP访问您的相册，以便于您将编辑的图片保存到相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>请允许APP访问您的相册，以便给您带来更好的体验</string>
+	<string>请允许APP访问您的相册，以便于您选择图片进行编辑</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -49,10 +50,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 </dict>
 </plist>
